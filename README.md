@@ -1,2 +1,2 @@
 # jsaw
-Javascript Algorithm Whiteboard
+Javascript Whiteboard
