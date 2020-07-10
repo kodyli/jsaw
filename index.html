@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Javascript Algorithm Whiteboard</title>
+	
+	<!-- Code Mirror -->
+	<link rel="stylesheet" href="./lib/codemirror/codemirror.css">
+	<link rel="stylesheet" href="./lib/jsaw/jsaw.css">
+	<!-- Code Mirror -->
+	<script src="./lib/codemirror/codemirror.js"></script>
+	<script src="./lib/codemirror/javascript.js"></script>
+	<script src="./lib/codemirror/continuecomment.js"></script>
+	<script src="./lib/codemirror/comment.js"></script>
+	<script src="./lib/codemirror/matchbrackets.js"></script>
+	<!-- JS Beautify -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.11.0/beautify.js"></script>
+	</style>
+  </head>
+  <body>
+	<textarea id="codeMirror"></textarea>
+	<div>
+		<button id="test">Test</button>
+	</div>
+	
+	<script src="./lib/jsaw/jsaw.js"></script>
+	<script>
+		var codeMirror = CodeMirror.fromTextArea(document.getElementById("codeMirror"),{
+			mode:  "javascript",
+			lineNumbers:true,
+			viewportMargin:Infinity 
+		});
+		//codeMirror.setSize("100%","100%");
+		document.getElementById("test").addEventListener("click", function(){
+			console.clear();
+			let beautified = js_beautify(codeMirror.getValue());
+			codeMirror.setValue(beautified);
+			jsaw.parse(beautified)();
+		});
+	</script>
+	<script>
+		//js beautify:https://beautifier.io/
+	</script>
+</body>
+</html>

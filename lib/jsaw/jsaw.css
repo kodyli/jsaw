@@ -1,0 +1,11 @@
+button {
+	border: medium none;
+	height: 50px;
+	left: 74%;
+	position: fixed;
+	width: 100px;
+}
+.CodeMirror {
+  border: 1px solid #eee;
+  height: 500px;
+}
