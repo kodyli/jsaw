@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Javascript Algorithm Whiteboard</title>
+    <title>JS Whiteboard</title>
 	
 	<!-- Code Mirror -->
 	<link rel="stylesheet" href="./lib/codemirror/codemirror.css">
@@ -28,19 +28,14 @@
 	<script>
 		var codeMirror = CodeMirror.fromTextArea(document.getElementById("codeMirror"),{
 			mode:  "javascript",
-			lineNumbers:true,
-			viewportMargin:Infinity 
+			lineNumbers:true 
 		});
-		//codeMirror.setSize("100%","100%");
 		document.getElementById("test").addEventListener("click", function(){
 			console.clear();
 			let beautified = js_beautify(codeMirror.getValue());
 			codeMirror.setValue(beautified);
 			jsaw.parse(beautified)();
 		});
-	</script>
-	<script>
-		//js beautify:https://beautifier.io/
 	</script>
 </body>
 </html>
