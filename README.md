@@ -3,9 +3,9 @@ JavaScript Algorithms Whiteboard
 
 ### How to us JSAW?
 ##### 1. clone this project.
-##### 2. add a js file to problem folder
+##### 2. add a problem to ./problems/problems.js
 ~~~js
-//maxSumSubarrayOfSizek.js
+//problems.js
 (function (jsaw) {
     jsaw.problem({
         name: 'Maximun Sum Subarray of Size K (easy)',
@@ -42,12 +42,6 @@ JavaScript Algorithms Whiteboard
         }
     });
 })(jsaw);
-~~~
-##### 3. add the js file to the end of index.html
-~~~html
-  <!-- Problems JS Files Start-->
-  <script src="./problems/maxSumSubarrayOfSizek.js"></script>
-  <!-- Problems JS Files End-->
 ~~~
 
 ### Want to help us?
