@@ -1,7 +1,7 @@
-# jsaw
-Javascript Whiteboard
+# JSAW
+JavaScript Algorithms Whiteboard
 
-### How to us JSAW?
+### How to us JSAW?JSAW
 ##### 1. clone this project.
 ##### 2. add a js file to problem folder
 ~~~js
@@ -49,3 +49,6 @@ Javascript Whiteboard
   <script src="./problems/maxSumSubarrayOfSizek.js"></script>
   <!-- Problems JS Files End-->
 ~~~
+
+### Want to help us?
+##### Be a contributor, and submit your problem.
