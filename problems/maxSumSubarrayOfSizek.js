@@ -2,13 +2,14 @@
     jsaw.problem({
         name: 'Maximun Sum Subarray of Size K (easy)',
         statement: 'Given an array of positive numbers and a positive number "K", find the maximum sum of any contiguous subarray of size "k".',
-        examples: "Input: [2, 1, 5, 1, 3, 2]; Output: 9.",
+        examples: "Input: k = 3, numbers = [2, 1, 5, 1, 3, 2]; Output: 9.",
         test: function (maxSubarrayOfSizeK) {
+            //jasmine style test cases.
             describe("Maximun Sum Subarray of Size K (easy)", function () {
-                it("Input: [2, 1, 5, 1, 3, 2], k=3; Output: 9.", function () {
+                it("Input: k = 3, numbers = [2, 1, 5, 1, 3, 2]; Output: 9.", function () {
                     expect(maxSubarrayOfSizeK(3, [2, 1, 5, 1, 3, 2])).toEqual(9);
                 });
-                it("Input: [2,3,4,1,5], k=2; Output: 7.", function () {
+                it("Input: k = 2, numbers = [2,3,4,1,5]; Output: 7.", function () {
                     expect(maxSubarrayOfSizeK(2, [2, 3, 4, 1, 5])).toEqual(7);
                 });
             });
