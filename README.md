@@ -5,6 +5,7 @@ Javascript Whiteboard
 ##### 1. clone this project.
 ##### 2. add a js file to problem folder
 ~~~js
+//maxSumSubarrayOfSizek.js
 (function (jsaw) {
     jsaw.problem({
         name: 'Maximun Sum Subarray of Size K (easy)',
