@@ -1,11 +1,30 @@
-button {
-	border: medium none;
-	height: 50px;
-	left: 74%;
-	position: fixed;
-	width: 100px;
+div.problems select {
+    margin: 10px auto;
+    width: 100%;
+    height: 50px;
 }
+
+div.problems select option {
+    height: 40px;
+}
+
+div.action-buttons button {
+    border: 1px solid #8a4182;
+    color: #8a4182;
+    padding: 8px 16px;
+    position: fixed;
+    z-index: 100;
+}
+
+button.test-button {
+    right: 30%;
+}
+
+button.beautify-button {
+    left: 30%;
+}
+
 .CodeMirror {
-  border: 1px solid #eee;
-  height: 500px;
+    border: 1px solid #eee;
+    height: 500px;
 }
