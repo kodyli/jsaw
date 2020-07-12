@@ -1,7 +1,7 @@
 # JSAW
 JavaScript Algorithms Whiteboard
 
-### How to us JSAW?JSAW
+### How to us JSAW?
 ##### 1. clone this project.
 ##### 2. add a js file to problem folder
 ~~~js
