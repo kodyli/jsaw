@@ -1,6 +1,6 @@
 (function (jsaw) {
     //sliding window
-    jsaw.problem({
+    jsaw.problem([{
         name: 'Find Average of Subarray of Size K (easy)',
         statement: "Given an array, find the average of all contiguous subarrays of size 'K' in it.",
         examples: "Input: k = 5, numbers =  [1,3,2,6,-1,4,1,8,2]; Output: [2.2,2.8,2.4,3.6,2.8].",
@@ -38,8 +38,8 @@
         },
         solution: function maxSubarrayOfSizeK(k, numbers) {
             let maxSum = 0,
-            sum = 0,
-            start = 0;
+                sum = 0,
+                start = 0;
             for (let i = 0, l = numbers.length; i < l; i++) {
                 sum += numbers[i];
                 // the size is fixed, so using 'if' statement.
@@ -105,7 +105,6 @@
         solution: function fruitsIntoBaskets(fruits) {
             return 0;
         }
-
     }, {
         name: "No-repeat Substring (hard)",
         statement: "Given a string, find the length of the longest substring which has no repeating characters.",
@@ -151,5 +150,5 @@
         solution: function lengthOfLongestSubstring(k, str) {
             return 0;
         }
-    });
+    }]);
 })(jsaw);
