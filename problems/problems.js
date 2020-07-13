@@ -124,7 +124,19 @@
             return 0;
         },
         solution: function nonRepeatSubstring(str) {
-            return 0;
+            let s = 0,
+                maxL = 0,
+                indexCache = {};
+            for (let e = 0, l = str.length; e < l; e++) {
+                let endChar = str.charAt(e);
+                if (endChar in indexCache) {
+                    s = Math.max(indexCache[endChar] + 1, s);
+                } else {
+                    indexCache[endChar] = e;
+                }
+                maxL = Math.max(e - s + 1, maxL);
+            }
+            return maxL;
         }
     }, {
         name: 'Longest Substring with Same Letters after Replacement (hard)',
@@ -148,7 +160,25 @@
             return 0;
         },
         solution: function lengthOfLongestSubstring(k, str) {
-            return 0;
+            const lengthCache = {};
+            let s = 0,
+                maxLength = 0,
+                maxRepeatLettersLength = 0;
+            for (let e = 0, l = str.length; e < l; e++) {
+                let endChar = str.charAt(e);
+                if (!(endChar in lengthCache)) {
+                    lengthCache[endChar] = 0;
+                }
+                lengthCache[endChar] += 1;
+                maxRepeatLettersLength = Math.max(maxRepeatLettersLength, lengthCache[endChar]);
+                if (e - s + 1 - maxRepeatLettersLength > k) {
+                    let startChar = str.charAt(s);
+                    lengthCache[startChar] -= 1;
+                    s += 1;
+                }
+                maxLength = Math.max(maxLength, e - s + 1);
+            }
+            return maxLength;
         }
     }]);
 })(jsaw);
