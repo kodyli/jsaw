@@ -198,4 +198,23 @@
             }
         ]
     );
+
+    jsaw.problem({
+        name: '0/1 Knapsack',
+        statement: "Given two integer arrays to represent weights and profits of 'N' items, we need to find a subset of these items which will give us maximum profit such that their cumulative weight is not more than a given number 'C'. Each item can only be selected once, which means either we put an item in the knapsack or we skip it.",
+        examples: "Input: profits = [4, 5, 3, 7], weights =  [2, 3, 1, 4], capacity = 5; Output: 10; Explanation: profits[2] + profits[3] = 10, weights[2] + weights[3] = 5.",
+        test: function (solveKnapsack) {
+            describe(this.name, function () {
+                it("Input: profits = [4, 5, 3, 7], weights = [2, 3, 1, 4]; Output: 10. ", function () {
+                    expect(solveKnapsack([4, 5, 3, 7], [2, 3, 1, 4], 5)).toEqual(10);
+                });
+            });
+        },
+        code: function solveKnapsack(profits, weights, capacity) {
+            return 0;
+        },
+        solution: function solveKnapsack(profits, weights, capacity) {
+            return 0;
+        }
+    });
 })(jsaw);
