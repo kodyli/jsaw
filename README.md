@@ -3,7 +3,7 @@ JavaScript Algorithms Whiteboard
 
 ### How to us JSAW?
 ##### 1. clone this project.
-##### 2. add a problem to ./problems/problems.js
+##### 2. add a problem/problems to ./problems/problems.js
 ~~~js
 //problems.js
 (function (jsaw) {
