@@ -39,8 +39,8 @@
         },
         solution: function maxSubarrayOfSizeK(k, numbers) {
             let maxSum = 0,
-                sum = 0,
-                start = 0;
+            sum = 0,
+            start = 0;
             for (let i = 0, l = numbers.length; i < l; i++) {
                 sum += numbers[i];
                 // the size is fixed, so using 'if' statement.
@@ -130,8 +130,8 @@
         },
         solution: function nonRepeatSubstring(str) {
             let s = 0,
-                maxL = 0,
-                indexCache = {};
+            maxL = 0,
+            indexCache = {};
             for (let e = 0, l = str.length; e < l; e++) {
                 let endChar = str.charAt(e);
                 if (endChar in indexCache) {
@@ -168,8 +168,8 @@
         solution: function lengthOfLongestSubstring(k, str) {
             const lengthCache = {};
             let s = 0,
-                maxLength = 0,
-                maxRepeatLettersLength = 0;
+            maxLength = 0,
+            maxRepeatLettersLength = 0;
             for (let e = 0, l = str.length; e < l; e++) {
                 let endChar = str.charAt(e);
                 if (!(endChar in lengthCache)) {
@@ -221,8 +221,8 @@
         }
     });
     jsaw.problem({
-        name: 'Equal Subset Sum Partition'
-        statement: 'Given a set of positive numbers, find if we can partition it into two subsets such that the sum of elements in both the subsets is equal.'
+        name: 'Equal Subset Sum Partition',
+        statement: 'Given a set of positive numbers, find if we can partition it into two subsets such that the sum of elements in both the subsets is equal.',
         examples: 'Input: [1, 1, 3, 4, 7], Output: true, Explanation: The given set can be partitioned into two subsets with equal sum: [1, 3, 4] & [1, 7]; Input: [2, 3, 4, 6], Output: false, Explanation: The given set cannot be partitioned into two subsets with equal sum.',
         test: function (canPartition) {
             describe(this.name, function () {
