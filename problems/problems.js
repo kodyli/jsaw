@@ -198,7 +198,7 @@
             }
         ]
     );
-
+    // Dynamic Programming
     jsaw.problem({
         name: '0/1 Knapsack',
         statement: "Given two integer arrays to represent weights and profits of 'N' items, we need to find a subset of these items which will give us maximum profit such that their cumulative weight is not more than a given number 'C'. Each item can only be selected once, which means either we put an item in the knapsack or we skip it.",
@@ -216,5 +216,30 @@
         solution: function solveKnapsack(profits, weights, capacity) {
             return 0;
         }
+    });
+    jsaw.problem({
+        name: 'Equal Subset Sum Partition'
+        statement: 'Given a set of positive numbers, find if we can partition it into two subsets such that the sum of elements in both the subsets is equal.'
+        examples: 'Input: [1, 1, 3, 4, 7], Output: true, Explanation: The given set can be partitioned into two subsets with equal sum: [1, 3, 4] & [1, 7]; Input: [2, 3, 4, 6], Output: false, Explanation: The given set cannot be partitioned into two subsets with equal sum.',
+        test: function (canPartition) {
+            describe(this.name, function () {
+                it("Input: [1, 1, 3, 4, 7], Output: true.", function () {
+                    let result = canPartition([1, 1, 3, 4, 7]);
+                    expect(result).toEqual(true);
+                });
+                it("Input: [1, 2, 3, 4], Output: true.", function () {
+                    let result = canPartition([1, 2, 3, 4]);
+                    expect(result).toEqual(true);
+                });
+                it("Input: [2, 3, 4, 6], Output: false.", function () {
+                    let result = canPartition([2, 3, 4, 6]);
+                    expect(result).toEqual(false);
+                });
+            });
+        },
+        code: function canPartition() {
+            return false;
+        },
+        solution: function canPartition() {}
     });
 })(jsaw);
