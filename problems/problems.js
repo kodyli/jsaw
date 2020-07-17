@@ -273,6 +273,27 @@
 			return '';
 		}
 	});
+	jsaw.problem({
+		name: 'Words Concatenation (hard)',
+		statement: "Given a string and a list of words, find all the starting indices of substrings in the given string that are a concatenation of all the given words exactly once without any overlapping of words. It is given that all words are of the same length.",
+		examples: "Input: str = 'catfoxcat', words = ['cat', 'fox']; Output: [0, 3]; Explanation: The two substring containing both the words are 'catfox' & 'foxcat'.",
+		test: function (findWordConcatenation) {
+			describe(this.name, function () {
+				it("Input: str = 'catfoxcat', words = ['cat', 'fox']; Output: [0, 3].", function () {
+					expect(findWordConcatenation('catfoxcat', ['cat', 'fox'])).toEqual([0, 3]);
+				});
+				it("Input: str = 'catcatfoxfox', words = ['cat', 'fox']; Output: [3].", function () {
+					expect(findWordConcatenation('catcatfoxfox', ['cat', 'fox'])).toEqual([3]);
+				});
+			});
+		},
+		code: function findWordConcatenation(str, pattern) {
+			return [];
+		},
+		solution: function findWordConcatenation(str, pattern) {
+			return [];
+		}
+	});
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
