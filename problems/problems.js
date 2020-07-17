@@ -207,6 +207,27 @@
 		code: function lengthOfLongestSubstring(k, numbers) {},
 		solution: function lengthOfLongestSubstring(k, numbers) {}
 	});
+	jsaw.problem({
+		name: 'Permutation in a String (hard)',
+		statement: "Given a string and a pattern, find out if the string contains any permutation of the pattern. Permutation is defined as the re-arranging of the characters of the string. For example, 'abc' has the following six permutations: 'abc', 'acb', 'bac', 'bca', 'cab', 'cba'.",
+		examples: "Input: str = 'oidbcaf', pattern = 'abc'; Output: true; Explanation: The string contains 'bca' which is a permutation of the given pattern.",
+		test: function (findPermutation) {
+			describe(this.name, function () {
+				it("Input: str = 'oidbcaf', pattern = 'abc'; Output: true.", function () {
+					expect(findPermutation('oidbcaf', 'abc')).toBe(true);
+				});
+				it("Input: str = 'odicf', pattern = 'dc'; Output: false.", function () {
+					expect(findPermutation('odicf', 'dc')).toBe(false);
+				});
+			});
+		},
+		code: function findPermutation(str, pattern) {
+			return false;
+		},
+		solution: function findPermutation(str, pattern) {
+			return false;
+		}
+	});
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
