@@ -231,7 +231,7 @@
 	jsaw.problem({
 		name: 'String Anagrams (hard)',
 		statement: "Given a string and pattern, find all anagrams of the pattern in the given string. Anagram is actually a Permutation of a string. For example, 'abc' has the following six anagrams: 'abc', 'acb', 'bac', 'bca', 'cab', 'cba'. Write a function to return a list of starting indices of the anagrams of the pattern in the given string.",
-		examples: "Input: str = 'ppqq', pattern = 'pq'; Output: [1, 2]; Explanation: Explanation: The two anagrams of the pattern in the given string are 'pq' and 'qp'.",
+		examples: "Input: str = 'ppqq', pattern = 'pq'; Output: [1, 2]; Explanation: The two anagrams of the pattern in the given string are 'pq' and 'qp'.",
 		test: function (findStringAnagrams) {
 			describe(this.name, function () {
 				it("Input: str = 'ppqq', pattern = 'pq'; Output: [1, 2].", function () {
@@ -247,6 +247,30 @@
 		},
 		solution: function findStringAnagrams(str, pattern) {
 			return [];
+		}
+	});
+	jsaw.problem({
+		name: 'Smallest Window containing Substring (hard)',
+		statement: "Given a string and a pattern, find the smallest substring in the given string which has all the characters of the given pattern.",
+		examples: "Input: str = 'aabdec', pattern = 'abc'; Output: 'abdec'; Explanation: The smallest substring having all characters of the pattern is 'abdec'.",
+		test: function (findSubstring) {
+			describe(this.name, function () {
+				it("Input: str = 'aabdec', pattern = 'abc'; Output: 'abdec'.", function () {
+					expect(findSubstring('aabdec', 'abc')).toEqual('abdec');
+				});
+				it("Input: str = 'adcad', pattern = 'abc'; Output: ''.", function () {
+					expect(findSubstring('adcad', 'abc')).toEqual('');
+				});
+				it("Input: str = 'abdabca', pattern = 'abc'; Output: 'abc'.", function () {
+					expect(findSubstring('abdabca', 'abc')).toEqual('abc');
+				});
+			});
+		},
+		code: function findSubstring(str, pattern) {
+			return '';
+		},
+		solution: function findSubstring(str, pattern) {
+			return '';
 		}
 	});
 	//Dynamic Programming
