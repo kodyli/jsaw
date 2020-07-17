@@ -228,6 +228,27 @@
 			return false;
 		}
 	});
+	jsaw.problem({
+		name: 'String Anagrams (hard)',
+		statement: "Given a string and pattern, find all anagrams of the pattern in the given string. Anagram is actually a Permutation of a string. For example, 'abc' has the following six anagrams: 'abc', 'acb', 'bac', 'bca', 'cab', 'cba'. Write a function to return a list of starting indices of the anagrams of the pattern in the given string.",
+		examples: "Input: str = 'ppqq', pattern = 'pq'; Output: [1, 2]; Explanation: Explanation: The two anagrams of the pattern in the given string are 'pq' and 'qp'.",
+		test: function (findStringAnagrams) {
+			describe(this.name, function () {
+				it("Input: str = 'ppqq', pattern = 'pq'; Output: [1, 2].", function () {
+					expect(findStringAnagrams('ppqq', 'pq')).toEqual([1, 2]);
+				});
+				it("Input: str = 'abbcabc', pattern = 'abc'; Output: [2, 3, 4].", function () {
+					expect(findStringAnagrams('abbcabc', 'abc')).toEqual([2, 3, 4]);
+				});
+			});
+		},
+		code: function findStringAnagrams(str, pattern) {
+			return [];
+		},
+		solution: function findStringAnagrams(str, pattern) {
+			return [];
+		}
+	});
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
