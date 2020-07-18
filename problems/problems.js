@@ -479,4 +479,31 @@
 		},
 		solution: function canPartition() {}
 	});
+	jsaw.problem({
+		name: 'Minimum Subset Sum Difference',
+		statement: "Given a set of positive numbers, partition the set into two subsets with a minimum difference between their subset sums.",
+		examples: "Input: numbers = [1, 2, 3, 9], Output: 3, Explanation: We can partition the given set into two subsets where minimum absolute difference between the sum of numbers is '3'. Following are the two subsets: [1, 2, 3] & [9].",
+		test: function (canPartition) {
+			describe(this.name, function () {
+				it("Input: numbers = [1, 2, 3, 9], Output: 3.", function () {
+					let result = canPartition([1, 2, 3, 9]);
+					expect(result).toEqual(3);
+				});
+				it("Input: [1, 2, 7, 1, 5], Output: 0.", function () {
+					let result = canPartition([1, 2, 7, 1, 5]);
+					expect(result).toEqual(0);
+				});
+				it("Input: [1, 3, 100, 4], Output: 92.", function () {
+					let result = canPartition([1, 3, 100, 4]);
+					expect(result).toEqual(92);
+				});
+			});
+		},
+		code: function canPartition(numbers) {
+			return 0;
+		},
+		solution: function canPartition(numbers) {
+			return 0;
+		}
+	});
 })(jsaw);
