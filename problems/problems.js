@@ -365,12 +365,12 @@
 	jsaw.problem({
 		name: 'Triplet Sum to Zero (medium)',
 		statement: "Given an array of unsorted numbers, find all unique triplets in it that add up to zero.",
-		examples: "Input: numbers = [-3, 0, 1, 2, -1, 1, -2]; Output:  [[-3, 1, 2], [-2, 0, 2], [-1, 0, 1]];",
+		examples: "Input: numbers = [-3, 0, 1, 2, -1, 1, -2]; Output:  [[-3, 1, 2], [-2, 0, 2], [-2, 1, 1], [-1, 0, 1]];",
 		test: function (searchTriplets) {
 			//jasmine style test cases.
 			describe(this.name, function () {
-				it("Input: numbers = [-3, 0, 1, 2, -1, 1, -2]; Output:  [[-3, 1, 2], [-2, 0, 2], [-1, 0, 1]].", function () {
-					expect(searchTriplets([-3, 0, 1, 2, -1, 1, -2])).toEqual([[-3, 1, 2], [-2, 0, 2], [-1, 0, 1]]);
+				it("Input: numbers = [-3, 0, 1, 2, -1, 1, -2]; Output:  [[-3, 1, 2], [-2, 0, 2], [-2, 1, 1], [-1, 0, 1]].", function () {
+					expect(searchTriplets([-3, 0, 1, 2, -1, 1, -2])).toEqual([[-3, 1, 2], [-2, 0, 2], [-2, 1, 1], [-1, 0, 1]]);
 				});
 			});
 		},
