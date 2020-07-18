@@ -378,7 +378,36 @@
 			return [];
 		},
 		solution: function searchTriplets(numbers) {
-			return [];
+			const result = [];
+			numbers.sort((a, b) => a - b);
+			for (let i = 0, l = numbers.length; i < l && numbers[i] < 0; i++) {
+				if (i === 0 || numbers[i] !== numbers[i - 1]) {
+					pairWithTargetSum(-numbers[i], numbers, i, result);
+				}
+			}
+
+			function pairWithTargetSum(target, numbers, currentIndex, result) {
+				let e = numbers.length - 1;
+				let s = currentIndex + 1;
+				let sum = 0;
+				while (e > s) {
+					sum = numbers[s] + numbers[e];
+					if (sum > target) {
+						e -= 1;
+					} else if (sum < target) {
+						s += 1;
+					} else {
+						result.push([numbers[currentIndex], numbers[s], numbers[e]]);
+						do {
+							s += 1;
+						} while (numbers[s] === numbers[s - 1]);
+						do {
+							e -= 1;
+						} while (numbers[e] === numbers[e + 1]);
+					}
+				}
+			}
+			return result;
 		}
 	});
 	//Dynamic Programming
