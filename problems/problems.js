@@ -410,6 +410,31 @@
 			return result;
 		}
 	});
+	jsaw.problem({
+		name: 'Triplet Sum Close to Target (medium)',
+		statement: "Given an array of unsorted numbers and a target number, find a triplet in the array whose sum is as close to the target number as possible, return the sum of the triplet. If there is more than one such triplet, return the sum fo the triplet with the smallest sum.",
+		examples: "Input: target = 2, numbers = [-2, 0, 1, 2]; Output: 1; Explanation: The triplet [-2, 1, 2] has the closest sum to the target.",
+		test: function (tripletSumCloseToTarget) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("Input: target = 2, numbers = [-2, 0, 1, 2]; Output: 1.", function () {
+					expect(tripletSumCloseToTarget(2, [-2, 0, 1, 2])).toEqual(1);
+				});
+				it("Input: target = 100, numbers = [1, 0, 1, 1]; Output: 3.", function () {
+					expect(tripletSumCloseToTarget(100, [1, 0, 1, 1])).toEqual(3);
+				});
+				it("Input: target = 1, numbers = [-3, -1, 1, 2]; Output: 0.", function () {
+					expect(tripletSumCloseToTarget(100, [1, 0, 1, 1])).toEqual(0);
+				});
+			});
+		},
+		code: function tripletSumCloseToTarget(target, numbers) {
+			return 0;
+		},
+		solution: function tripletSumCloseToTarget(target, numbers) {
+			return 0;
+		}
+	});
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
