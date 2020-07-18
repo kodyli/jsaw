@@ -204,8 +204,12 @@
 				});
 			});
 		},
-		code: function lengthOfLongestSubstring(k, numbers) {},
-		solution: function lengthOfLongestSubstring(k, numbers) {}
+		code: function lengthOfLongestSubstring(k, numbers) {
+			return 0;
+		},
+		solution: function lengthOfLongestSubstring(k, numbers) {
+			return 0;
+		}
 	});
 	jsaw.problem({
 		name: 'Permutation in a String (hard)',
@@ -291,6 +295,70 @@
 			return [];
 		},
 		solution: function findWordConcatenation(str, pattern) {
+			return [];
+		}
+	});
+	//Tow Pointers
+	jsaw.problem({
+		name: 'Pair with Target Sum (easy)',
+		statement: "Given an array of sorted numbers and a target sum, find a pair in the array whose sum is equal to the given target.",
+		examples: "Input: target = 6, numbers = [1, 2, 3, 4, 6]; Output: [1, 3]; Explanation: The numbers at index 1 and 3 add up to6: 2+4=6.",
+		test: function (pairWithTargetSum) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("Input: target = 6, numbers = [1, 2, 3, 4, 6]; Output: [1, 3].", function () {
+					expect(pairWithTargetSum(6, [1, 2, 3, 4, 6])).toEqual([1, 3]);
+				});
+				it("Input: target = 11, numbers = [1, 2, 3, 4, 6]; Output: [].", function () {
+					expect(pairWithTargetSum(11, [1, 2, 3, 4, 6])).toEqual([]);
+				});
+			});
+		},
+		code: function pairWithTargetSum(target, numbers) {
+			return [];
+		},
+		solution: function pairWithTargetSum(target, numbers) {
+			return [];
+		}
+	});
+	jsaw.problem({
+		name: 'Remove Duplicates (easy)',
+		statement: "Given an array of sorted numbers, remove all duplicates from it. You should not use any extra space; after removing the duplicates in-place return the new length of the array.",
+		examples: "Input: numbers = [2, 3, 3, 3, 6, 9, 9]; Output: 4; Explanation: The first four element after removing the duplicates will be [2, 3, 6, 9].",
+		test: function (removeDuplicate) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("Input: numbers = [2, 3, 3, 3, 6, 9, 9]; Output: 4.", function () {
+					expect(removeDuplicate([2, 3, 3, 3, 6, 9, 9])).toEqual(4);
+				});
+			});
+		},
+		code: function removeDuplicate(numbers) {
+			return 0;
+		},
+		solution: function removeDuplicate(numbers) {
+			return 0;
+		}
+	});
+	jsaw.problem({
+		name: 'Squaring a Sorted Array (easy)',
+		statement: "Given a sorted array, create a new array containing squares of all the number of the input array in the sorted order.",
+		examples: "Input: numbers = [-2, -1, 0, 2, 3]; Output: [0, 1, 4, 4, 9];",
+		test: function (makeSquares) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("Input: numbers = [-2, -1, 0, 2, 3]; Output: [0, 1, 4, 4, 9];", function () {
+					expect(makeSquares([-2, -1, 0, 2, 3])).toEqual([0, 1, 4, 4, 9]);
+				});
+				it("Input: numbers = [-3, -1, 0, 1, 2]; Output: [0, 1, 1, 4, 9];", function () {
+					expect(makeSquares([-3, -1, 0, 1, 2])).toEqual([0, 1, 1, 4, 9]);
+				});
+			});
+		},
+		code: function makeSquares(numbers) {
+			return [];
+		},
+		solution: function makeSquares(numbers) {
 			return [];
 		}
 	});
