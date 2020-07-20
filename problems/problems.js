@@ -505,6 +505,31 @@
 			return [];
 		}
 	});
+	jsaw.problem({
+		name: 'Conflicting Appointments (medium)',
+		statement: "Given an array of intervals representing 'N' appointments, find out if a person can attend all the appointments.",
+		examples: "Input: appointments = [[1, 4], [2, 5], [7, 9]]; Output: false; Explanation: Since [1, 4] and [2, 5] overlap, a person cannot attend both of these appointments.",
+		test: function (canAttendAllAppointments) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("Input: appointments = [[1, 4], [2, 5], [7, 9]]; Output: false.", function () {
+					expect(canAttendAllAppointments([[1, 4], [2, 5], [7, 9]])).toEqual(false);
+				});
+				it("Input: appointments = [[6, 7], [2, 4], [8, 12]]; Output: true.", function () {
+					expect(canAttendAllAppointments([[6, 7], [2, 4], [8, 12]])).toEqual(true);
+				});
+				it("Input: appointments = [[4, 5], [2, 3], [3, 6]]; Output: false.", function () {
+					expect(canAttendAllAppointments([[4, 5], [2, 3], [3, 6]])).toEqual(false);
+				});
+			});
+		},
+		code: function canAttendAllAppointments(appointments) {
+			return false;
+		},
+		solution: function canAttendAllAppointments(appointments) {
+			return false;
+		}
+	});
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
