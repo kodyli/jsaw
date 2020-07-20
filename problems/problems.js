@@ -458,7 +458,31 @@
 			return [];
 		}
 	});
-
+	jsaw.problem({
+		name: 'Inset Interval (medium)',
+		statement: "Given a list of non-overlapping intervals sorted by their start time, insert a given interval at the correct position and merge all necessary intervals to produce a list that has only mutually exclusive intervals.",
+		examples: "Input: [[1, 3], [5, 7], [8, 12]], newInterval = [4, 10]; Output: [[1, 3], [4, 12]]; Explanation: After insertion, since [4, 10] overlaps with [5, 7] & [8, 12], we merged them into [4, 12].",
+		test: function (insert) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("Input: [[1, 3], [5, 7], [8, 12]], newInterval = [4, 10]; Output: [[1, 3], [4, 12]].", function () {
+					expect(insert([[1, 3], [5, 7], [8, 12]], [4, 10])).toEqual([[1, 3], [4, 12]]);
+				});
+				it("Input: [[1, 3], [5, 7], [8, 12]], newInterval = [4, 6]; Output: [[1, 3], [4, 7], [8, 12]].", function () {
+					expect(insert([[1, 3], [5, 7], [8, 12]], [4, 6])).toEqual([[1, 3], [4, 7], [8, 12]]);
+				});
+				it("Input: [[2, 3], [5, 7]], newInterval = [1, 4]; Output: [[1, 4], [5, 7]].", function () {
+					expect(insert([[2, 3], [5, 7]], [1, 4])).toEqual([[1, 4], [5, 7]]);
+				});
+			});
+		},
+		code: function insert(intervals, newInterval) {
+			return [];
+		},
+		solution: function insert(intervals, newInterval) {
+			return [];
+		}
+	});
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
