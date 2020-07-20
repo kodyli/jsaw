@@ -435,6 +435,30 @@
 			return 0;
 		}
 	});
+	//Merge Intervals
+	jsaw.problem({
+		name: 'Merge Intervals (medium)',
+		statement: "Given a list of intervals, merge all the overlapping intervals to produce a list that has only mutually exclusive intervals.",
+		examples: "Input: intervals =  [[1, 4], [2, 5], [7, 9]]; Output: [[1, 5], [7, 9]]; Explanation: Since the first two intervals [1, 4] and [2, 5] overlap, we merged them into on [1, 5].",
+		test: function (merge) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("Input: intervals = [[1, 4], [2, 5], [7, 9]]; Output: [[1, 5], [7, 9]].", function () {
+					expect(merge([[1, 4], [2, 5], [7, 9]])).toEqual([[1, 5], [7, 9]]);
+				});
+				it("Input: intervals = [[1, 4], [2, 6], [3, 5]]; Output: [[1, 6]].", function () {
+					expect(merge([[1, 4], [2, 6], [3, 5]])).toEqual([[1, 6]]);
+				});
+			});
+		},
+		code: function merge(intervals) {
+			return [];
+		},
+		solution: function merge(intervals) {
+			return [];
+		}
+	});
+
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
