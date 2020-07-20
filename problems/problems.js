@@ -483,6 +483,28 @@
 			return [];
 		}
 	});
+	jsaw.problem({
+		name: 'Intervals Intersection (medium)',
+		statement: "Given two lists of intervals, find the intersection of these two lists. Each list consists of disjoint intervals sorted on their start time.",
+		examples: "Input: intervals1 = [[1, 3], [5, 6], [7, 9]], intervals2 = [[2, 3], [5, 7]]; Output: [[2, 3], [5, 6], [7, 7]]; Explanation: The output list contains the common intervals between the two lists.",
+		test: function (merge) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("Input: intervals1 = [[1, 3], [5, 6], [7, 9]], intervals2 = [[2, 3], [5, 7]]; Output: [[2, 3], [5, 6], [7, 7]].", function () {
+					expect(merge([[1, 3], [5, 6], [7, 9]], [[2, 3], [5, 7]])).toEqual([[2, 3], [5, 6], [7, 7]]);
+				});
+				it("Input: intervals1 = [[1, 3], [5, 7], [9, 12]], intervals2 = [[5, 10]]; Output: [[5, 7], [9, 10]].", function () {
+					expect(merge([[1, 3], [5, 7], [9, 12]], [[5, 10]])).toEqual([[5, 7], [9, 10]]);
+				});
+			});
+		},
+		code: function merge(intervals1, intervals2) {
+			return [];
+		},
+		solution: function merge(intervals1, intervals2) {
+			return [];
+		}
+	});
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
