@@ -601,4 +601,27 @@
 			return 0;
 		}
 	});
+	jsaw.problem({
+		name: 'Count of Subset Sum',
+		statement: "Given a set of positive numbers, find the total number of subsets whose sum is equal to a given number 's'.",
+		examples: "Input: numbers = [1, 1, 2, 3], s = 4; Output: 3, Explanation: The given set has '3' subsets whose sum is '4': [1, 1, 2], [1, 3], and [1, 3].",
+		test: function (countSubsets) {
+			describe(this.name, function () {
+				it("Input: numbers = [1, 1, 2, 3], s = 4; Output: 3.", function () {
+					let result = countSubsets([1, 1, 2, 3], 4);
+					expect(result).toEqual(3);
+				});
+				it("Input: numbers = [1, 2, 7, 1, 5], s = 9; Output: 3.", function () {
+					let result = countSubsets([1, 2, 7, 1, 5], 9);
+					expect(result).toEqual(3);
+				});
+			});
+		},
+		code: function countSubsets(numbers, s) {
+			return 0;
+		},
+		solution: function countSubsets(numbers, s) {
+			return 0;
+		}
+	});
 })(jsaw);
