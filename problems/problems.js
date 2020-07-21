@@ -624,4 +624,27 @@
 			return 0;
 		}
 	});
+	jsaw.problem({
+		name: 'Target Sum',
+		statement: "Given a set of positive numbers (non zero) and a target sum 's'. Each number should be assigned either a '+' or '-' sign. We need to find out total ways to assign symbols to make the sum of numbers equal to target 's'.",
+		examples: "Input: numbers = [1, 1, 2, 3], s = 1; Output: 3, Explanation: The given set has '3' ways to make a sum of '1': +1-1-2+3 = 1, -1+1-2+3 = 1, +1+1+2-3 = 1.",
+		test: function (findTargetSubsets) {
+			describe(this.name, function () {
+				it("Input: numbers = [1, 1, 2, 3], s = 1; Output: 3.", function () {
+					let result = findTargetSubsets([1, 1, 2, 3], 1);
+					expect(result).toEqual(3);
+				});
+				it("Input: numbers = [1, 2, 7, 1], s = 9; Output: 2.", function () {
+					let result = findTargetSubsets([1, 2, 7, 1], 9);
+					expect(result).toEqual(2);
+				});
+			});
+		},
+		code: function findTargetSubsets(numbers, s) {
+			return 0;
+		},
+		solution: function findTargetSubsets(numbers, s) {
+			return 0;
+		}
+	});
 })(jsaw);
