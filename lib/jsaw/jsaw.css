@@ -19,7 +19,7 @@ div.action-buttons button {
 	border: 1px solid #8a4182;
 	color: #8a4182;
 	padding: 8px 16px;
-	position: fixed;
+	position: absolute;
 	z-index: 100;
 }
 
