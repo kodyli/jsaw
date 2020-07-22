@@ -637,6 +637,39 @@
 			return result;
 		}
 	});
+	jsaw.problem({
+		name: 'Zigzag Traversal (medium)',
+		statement: "Given a binary tree, populate an array to represent its zigzag level order traversal. You should populate the values of all nodes of the first level from left to right, then right to left for the next level, and keep alternating in the same manner for the following levels.",
+		examples: "Input: <img src = 'https://he-s3.s3.amazonaws.com/media/uploads/fdec3c2.jpg'>; Output: [[0], [3, 2, 1], [4, 5, 6, 7]]",
+		test: function (bfsTraverse) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("test", function () {
+					let root = new Node(1);
+					root.left = new Node(2);
+					root.right = new Node(3);
+					root.left.left = new Node(4);
+					root.left.right = new Node(5);
+					root.right.left = new Node(6);
+					root.right.right = new Node(7);
+					expect(bfsTraverse(root)).toEqual([[1], [3, 2], [4, 5, 6, 7]]);
+				});
+			});
+		},
+		code: function bfsTraverse(rootNode) {
+			/**
+			 *	function Node(value) {
+			 *		this.value = value;
+			 *		this.left = null;
+			 *		this.right = null;
+			 *	}
+			 */
+			return [];
+		},
+		solution: function bfsTraverse(rootNode) {
+			return [];
+		}
+	});
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
