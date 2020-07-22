@@ -538,12 +538,6 @@
 		test: function (bfsTraverse) {
 			//jasmine style test cases.
 			describe(this.name, function () {
-				function Node(value) {
-					this.value = value;
-					this.left = null;
-					this.right = null;
-				}
-
 				it("Example", function () {
 					let root = new Node(1);
 					root.left = new Node(2);
