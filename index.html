@@ -2,94 +2,95 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>JS Algorithms Whiteboard</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>JS Algorithms Whiteboard</title>
 
-    <!-- Code Mirror -->
-    <link rel="stylesheet" href="./lib/codemirror/codemirror.css">
-    <!-- Jasmine Test -->
-    <link rel="stylesheet" href="./lib/jasmine/jasmine.css">
-    <link rel="shortcut icon" type="image/png" href="./lib/jasmine/jasmine_favicon.png">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./lib/jsaw/jsaw.css">
-    <!-- Code Mirror -->
-    <script src="./lib/codemirror/codemirror.js"></script>
-    <script src="./lib/codemirror/javascript.js"></script>
-    <script src="./lib/codemirror/continuecomment.js"></script>
-    <script src="./lib/codemirror/comment.js"></script>
-    <script src="./lib/codemirror/matchbrackets.js"></script>
-    <!-- Jasmine Test -->
-    <script src="./lib/jasmine/jasmine.js"></script>
-    <script src="./lib/jasmine/jasmine-html.js"></script>
-    <!-- JS Beautify -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.11.0/beautify.js"></script>
-    <!-- jsaw -->
-    <script src="./lib/jsaw/jsaw.js"></script>
-    <script src="./boot.js"></script>
+	<!-- Code Mirror -->
+	<link rel="stylesheet" href="./lib/codemirror/codemirror.css">
+	<!-- Jasmine Test -->
+	<link rel="stylesheet" href="./lib/jasmine/jasmine.css">
+	<link rel="shortcut icon" type="image/png" href="./lib/jasmine/jasmine_favicon.png">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="./lib/jsaw/jsaw.css">
+	<!-- Code Mirror -->
+	<script src="./lib/codemirror/codemirror.js"></script>
+	<script src="./lib/codemirror/javascript.js"></script>
+	<script src="./lib/codemirror/continuecomment.js"></script>
+	<script src="./lib/codemirror/comment.js"></script>
+	<script src="./lib/codemirror/matchbrackets.js"></script>
+	<!-- Jasmine Test -->
+	<script src="./lib/jasmine/jasmine.js"></script>
+	<script src="./lib/jasmine/jasmine-html.js"></script>
+	<!-- JS Beautify -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.11.0/beautify.js"></script>
+	<!-- jsaw -->
+	<script src="./lib/jsaw/jsaw.js"></script>
+	<script src="./lib/jsaw/node.js"></script>
+	<script src="./boot.js"></script>
 </head>
 
 <body>
-    <div class="problems">
-        <select id="problems">
-        </select>
-        <span><b>Statement:</b></span>
-        <p id="statement"></p>
-        <span><b>Examples:</b></span>
-        <p id="examples"></p>
-    </div>
-    <textarea id="codeMirror"></textarea>
-    <div class="action-buttons">
-        <button id="test" class="test-button">Test</button>
-        <button id="beautify" class="beautify-button">Beautify</button>
-    </div>
-    <!-- Problems JS Files Start-->
-    <script src="./problems/problems.js"></script>
-    <!-- Problems JS Files End-->
-    <script>
-        var codeMirror = CodeMirror.fromTextArea(document.getElementById("codeMirror"), {
-            indentUnit: 4,
-            indentWithTabs: true,
-            mode: "javascript",
-            lineNumbers: true
-        });
-        document.getElementById("problems").innerHTML = jsaw.renderProblems();
-        let currentProblem;
-        renderProblem(0);
-        document.getElementById("problems").addEventListener("change", function(e) {
-            renderProblem(parseInt(e.target.value));
-        });
-        document.getElementById("beautify").addEventListener("click", function(e) {
-            let beautified = js_beautify(codeMirror.getValue());
-            codeMirror.setValue(beautified);
-        });
-        document.getElementById("test").addEventListener("click", function() {
-            boot(function() {
-                jsaw.test(codeMirror.getValue(), currentProblem);
-            });
-        });
+	<div class="problems">
+		<select id="problems">
+		</select>
+		<span><b>Statement:</b></span>
+		<p id="statement"></p>
+		<span><b>Examples:</b></span>
+		<p id="examples"></p>
+	</div>
+	<textarea id="codeMirror"></textarea>
+	<div class="action-buttons">
+		<button id="test" class="test-button">Test</button>
+		<button id="beautify" class="beautify-button">Beautify</button>
+	</div>
+	<!-- Problems JS Files Start-->
+	<script src="./problems/problems.js"></script>
+	<!-- Problems JS Files End-->
+	<script>
+		var codeMirror = CodeMirror.fromTextArea(document.getElementById("codeMirror"), {
+			indentUnit: 4,
+			indentWithTabs: true,
+			mode: "javascript",
+			lineNumbers: true
+		});
+		document.getElementById("problems").innerHTML = jsaw.renderProblems();
+		let currentProblem;
+		renderProblem(0);
+		document.getElementById("problems").addEventListener("change", function(e) {
+			renderProblem(parseInt(e.target.value));
+		});
+		document.getElementById("beautify").addEventListener("click", function(e) {
+			let beautified = js_beautify(codeMirror.getValue());
+			codeMirror.setValue(beautified);
+		});
+		document.getElementById("test").addEventListener("click", function() {
+			boot(function() {
+				jsaw.test(codeMirror.getValue(), currentProblem);
+			});
+		});
 
-        function renderProblem(index) {
-            currentProblem = jsaw.getProblem(index);
-            document.getElementById("statement").innerHTML = currentProblem.statement;
-            document.getElementById("examples").innerHTML = currentProblem.examples;
-            let beautified = js_beautify(currentProblem.code.toString());
-            codeMirror.setValue(beautified);
-        }
+		function renderProblem(index) {
+			currentProblem = jsaw.getProblem(index);
+			document.getElementById("statement").innerHTML = currentProblem.statement;
+			document.getElementById("examples").innerHTML = currentProblem.examples;
+			let beautified = js_beautify(currentProblem.code.toString());
+			codeMirror.setValue(beautified);
+		}
 
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172748154-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172748154-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-172748154-1');
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-172748154-1');
 
-    </script>
+	</script>
 </body>
 
 </html>
