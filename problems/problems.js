@@ -530,6 +530,46 @@
 			return false;
 		}
 	});
+	//Breadth First Search
+	jsaw.problem({
+		name: 'Binary Tree Level Order Traversal (easy)',
+		statement: "Given a binary tree, populate an array to represent its level-by-level traversal. You should populate the values of all nodes of each level from left to right in separate sub-arrays.",
+		examples: "<img src = 'https://upload-images.jianshu.io/upload_images/23437399-6ddb51a589aadb91.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240' width='600' height='300'>",
+		test: function (bfsTraverse) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				function Node(value) {
+					this.value = value;
+					this.left = null;
+					this.right = null;
+				}
+
+				it("Example", function () {
+					let root = new Node(1);
+					root.left = new Node(2);
+					root.right = new Node(3);
+					root.left.left = new Node(4);
+					root.left.right = new Node(5);
+					root.right.left = new Node(6);
+					root.right.right = new Node(7);
+					expect(bfsTraverse(root)).toEqual([[1], [2, 3], [4, 5, 6, 7]]);
+				});
+			});
+		},
+		code: function bfsTraverse(rootNode) {
+			/**
+			 *	function Node(value) {
+			 *		this.value = value;
+			 *		this.left = null;
+			 *		this.right = null;
+			 *	}
+			 */
+			return [];
+		},
+		solution: function bfsTraverse(rootNode) {
+			return [];
+		}
+	});
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
