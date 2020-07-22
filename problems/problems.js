@@ -584,6 +584,59 @@
 			return result;
 		}
 	});
+	jsaw.problem({
+		name: 'Reverse Level Order Traversal (easy)',
+		statement: "Given a binary tree, populate an array to represent its level-by-level traversal in reverse order, i.e., the lowest level comes first. You should populate the values of all nodes in each level from left to right in separate subarrays.",
+		examples: "Input: <img src = 'https://he-s3.s3.amazonaws.com/media/uploads/fdec3c2.jpg'>; Output: [[4, 5, 6, 7], [1, 2, 3], [0]]",
+		test: function (bfsTraverse) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("test", function () {
+					let root = new Node(1);
+					root.left = new Node(2);
+					root.right = new Node(3);
+					root.left.left = new Node(4);
+					root.left.right = new Node(5);
+					root.right.left = new Node(6);
+					root.right.right = new Node(7);
+					expect(bfsTraverse(root)).toEqual([[4, 5, 6, 7], [2, 3], [1]]);
+				});
+			});
+		},
+		code: function bfsTraverse(rootNode) {
+			/**
+			 *	function Node(value) {
+			 *		this.value = value;
+			 *		this.left = null;
+			 *		this.right = null;
+			 *	}
+			 */
+			return [];
+		},
+		solution: function bfsTraverse(rootNode) {
+			const result = [];
+			if (!rootNode) {
+				return result;
+			}
+			const queue = [rootNode];
+			while (queue.length > 0) {
+				let levelSize = queue.length;
+				const currentLevel = [];
+				for (let i = 0; i < levelSize; i++) {
+					let currentNode = queue.shift();
+					currentLevel.push(currentNode.value);
+					if (currentNode.left) {
+						queue.push(currentNode.left);
+					}
+					if (currentNode.right) {
+						queue.push(currentNode.right);
+					}
+				}
+				result.unshift(currentLevel);
+			}
+			return result;
+		}
+	});
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
