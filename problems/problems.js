@@ -703,6 +703,37 @@
 			return [];
 		}
 	});
+	jsaw.problem({
+		name: 'Minimum Depth of a Binary Tree (easy)',
+		statement: "Find the minimum depth of a binary tree. The minimum depth is the number of nodes along the sortest path from the root node to the nearest leaf node.",
+		examples: "Input: <img src = 'https://www.ideserve.co.in/learn/img/MinimumDepthOfBinaryTree.gif'>; Output: 3.",
+		test: function (findMinimumDepth) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("test", function () {
+					let root = new Node(1);
+					root.left = new Node(2);
+					root.right = new Node(3);
+					root.left.left = new Node(4);
+					root.left.right = new Node(5);
+					expect(findMinimumDepth(root)).toEqual(2);
+				});
+			});
+		},
+		code: function findMinimumDepth(rootNode) {
+			/**
+			 *	function Node(value) {
+			 *		this.value = value;
+			 *		this.left = null;
+			 *		this.right = null;
+			 *	}
+			 */
+			return 0;
+		},
+		solution: function findMinimumDepth(rootNode) {
+			return 0;
+		}
+	});
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
