@@ -784,6 +784,38 @@
 			return result1 || result2;
 		}
 	});
+	jsaw.problem({
+		name: 'All Paths for a Sum (medium)',
+		statement: "Given a binary tree and a number 's', find all paths from root-to-leaf such that the sum of all the node values of each path equals 's'.",
+		examples: "Input: tree = <img src = 'https://media.geeksforgeeks.org/wp-content/uploads/BST_sum.png'>, s = 164; Output: 1; Explanation: There is only one path with sum 164: 45 + 38 + 41 + 40 = 164.",
+		test: function (findPaths) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("1 + 2 + 5 = 8.", function () {
+					let root = new Node(1);
+					root.left = new Node(2);
+					root.right = new Node(3);
+					root.left.left = new Node(4);
+					root.left.right = new Node(5);
+					root.right.left = new Node(4);
+					expect(findPaths(root, 8)).toEqual(2);
+				});
+			});
+		},
+		code: function findPaths(rootNode, s) {
+			/**
+			 *	function Node(value) {
+			 *		this.value = value;
+			 *		this.left = null;
+			 *		this.right = null;
+			 *	}
+			 */
+			return 0;
+		},
+		solution: function findPaths(rootNode, s) {
+			return 0;
+		}
+	});
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
