@@ -791,7 +791,7 @@
 		test: function (findPaths) {
 			//jasmine style test cases.
 			describe(this.name, function () {
-				it("1 + 2 + 5 = 8.", function () {
+				it("1 + 2 + 5 = 8; 1 + 3 + 4 = 8;", function () {
 					let root = new Node(1);
 					root.left = new Node(2);
 					root.right = new Node(3);
