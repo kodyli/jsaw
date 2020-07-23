@@ -734,6 +734,38 @@
 			return 0;
 		}
 	});
+	//Depth First Search (DFS)
+	jsaw.problem({
+		name: 'Binary Tree Path Sum (easy)',
+		statement: "Given a binary tree and a number 'S', find if the tree has a path from root-to-leaf such that the sum of all the node values of that path equals 'S'.",
+		examples: "Input: <img src = 'https://media.geeksforgeeks.org/wp-content/uploads/BST_sum.png'>; Output: true.",
+		test: function (findPath) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("1 + 2 + 5 = 8.", function () {
+					let root = new Node(1);
+					root.left = new Node(2);
+					root.right = new Node(3);
+					root.left.left = new Node(4);
+					root.left.right = new Node(5);
+					expect(findPath(root)).toEqual(8);
+				});
+			});
+		},
+		code: function findPath(rootNode) {
+			/**
+			 *	function Node(value) {
+			 *		this.value = value;
+			 *		this.left = null;
+			 *		this.right = null;
+			 *	}
+			 */
+			return 0;
+		},
+		solution: function findPath(rootNode) {
+			return 0;
+		}
+	});
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
