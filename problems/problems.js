@@ -760,10 +760,10 @@
 			 *		this.right = null;
 			 *	}
 			 */
-			return 0;
+			return false;
 		},
 		solution: function findPath(rootNode, s) {
-			return 0;
+			return false;
 		}
 	});
 	//Dynamic Programming
