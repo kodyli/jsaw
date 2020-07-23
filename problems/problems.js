@@ -738,7 +738,7 @@
 	jsaw.problem({
 		name: 'Binary Tree Path Sum (easy)',
 		statement: "Given a binary tree and a number 'S', find if the tree has a path from root-to-leaf such that the sum of all the node values of that path equals 'S'.",
-		examples: "Input: tree = <img src = 'https://media.geeksforgeeks.org/wp-content/uploads/BST_sum.png'>, s = 164; Output: true.",
+		examples: "Input: tree = <img src = 'https://media.geeksforgeeks.org/wp-content/uploads/BST_sum.png'>, s = 164; Output: true; Explanation: 45 + 38 + 41 + 40 = 164.",
 		test: function (findPath) {
 			//jasmine style test cases.
 			describe(this.name, function () {
