@@ -534,7 +534,7 @@
 	jsaw.problem({
 		name: 'Binary Tree Level Order Traversal (easy)',
 		statement: "Given a binary tree, populate an array to represent its level-by-level traversal. You should populate the values of all nodes of each level from left to right in separate sub-arrays.",
-		examples: "Input: <img src = 'https://he-s3.s3.amazonaws.com/media/uploads/fdec3c2.jpg'>; Output: [[0], [1, 2, 3], [4, 5, 6, 7]]",
+		examples: "Input: <img src = 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/2009/06/tree12.gif'>; Output: [[1], [2, 3], [4, 5]]",
 		test: function (bfsTraverse) {
 			//jasmine style test cases.
 			describe(this.name, function () {
@@ -587,7 +587,7 @@
 	jsaw.problem({
 		name: 'Reverse Level Order Traversal (easy)',
 		statement: "Given a binary tree, populate an array to represent its level-by-level traversal in reverse order, i.e., the lowest level comes first. You should populate the values of all nodes in each level from left to right in separate subarrays.",
-		examples: "Input: <img src = 'https://he-s3.s3.amazonaws.com/media/uploads/fdec3c2.jpg'>; Output: [[4, 5, 6, 7], [1, 2, 3], [0]]",
+		examples: "Input: <img src = 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/2009/06/tree12.gif'>; Output: [[4, 5], [2, 3], [1]]",
 		test: function (bfsTraverse) {
 			//jasmine style test cases.
 			describe(this.name, function () {
@@ -640,7 +640,7 @@
 	jsaw.problem({
 		name: 'Zigzag Traversal (medium)',
 		statement: "Given a binary tree, populate an array to represent its zigzag level order traversal. You should populate the values of all nodes of the first level from left to right, then right to left for the next level, and keep alternating in the same manner for the following levels.",
-		examples: "Input: <img src = 'https://he-s3.s3.amazonaws.com/media/uploads/fdec3c2.jpg'>; Output: [[0], [3, 2, 1], [4, 5, 6, 7]]",
+		examples: "Input: <img src = 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/2009/06/tree12.gif'>; Output: [[1], [3, 2], [4, 5]]",
 		test: function (bfsTraverse) {
 			//jasmine style test cases.
 			describe(this.name, function () {
@@ -673,7 +673,7 @@
 	jsaw.problem({
 		name: 'Level Averages in a Binary Tree (easy)',
 		statement: "Given a binary tree, populate an array to represent the averages of all of its levels.",
-		examples: "Input: <img src = 'https://he-s3.s3.amazonaws.com/media/uploads/fdec3c2.jpg'>; Output: [0, 2, 5.5]",
+		examples: "Input: <img src = 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/2009/06/tree12.gif'>; Output: [1, 2.5, 4.5]",
 		test: function (findLevelAverages) {
 			//jasmine style test cases.
 			describe(this.name, function () {
@@ -813,6 +813,38 @@
 			return 0;
 		},
 		solution: function findPaths(rootNode, s) {
+			return 0;
+		}
+	});
+	jsaw.problem({
+		name: 'Sum of Path Numbers (medium)',
+		statement: "Given a binary tree where each node can only have a digit (0-9) value, each root-to-leaf path will represent a number. Find the total sum of all the numbers represented by all paths.",
+		examples: "Input: tree = <img src = 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/2009/06/tree12.gif'>; Output: 262; Explanation: The sum of all path numbers: 124 + 125 + 13 = 262.",
+		test: function (findSumOfPathNumbers) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("124 + 125 + 134 = 383.", function () {
+					let root = new Node(1);
+					root.left = new Node(2);
+					root.right = new Node(3);
+					root.left.left = new Node(4);
+					root.left.right = new Node(5);
+					root.right.left = new Node(4);
+					expect(findSumOfPathNumbers(root)).toEqual(383);
+				});
+			});
+		},
+		code: function findSumOfPathNumbers(rootNode) {
+			/**
+			 *	function Node(value) {
+			 *		this.value = value;
+			 *		this.left = null;
+			 *		this.right = null;
+			 *	}
+			 */
+			return 0;
+		},
+		solution: function findSumOfPathNumbers(rootNode) {
 			return 0;
 		}
 	});
