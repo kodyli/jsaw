@@ -763,7 +763,25 @@
 			return false;
 		},
 		solution: function findPath(rootNode, s) {
-			return false;
+			/**
+			 *	function Node(value) {
+			 *		this.value = value;
+			 *		this.left = null;
+			 *		this.right = null;
+			 *	}
+			 */
+			if (rootNode.value === s && rootNode.left === null && rootNode.right === null) {
+				return true
+			}
+			let result1 = false;
+			if (rootNode.left) {
+				result1 = findPath(rootNode.left, s - rootNode.value)
+			}
+			let result2 = false;
+			if (rootNode.right) {
+				result2 = findPath(rootNode.right, s - rootNode.value)
+			}
+			return result1 || result2;
 		}
 	});
 	//Dynamic Programming
