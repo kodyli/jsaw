@@ -848,6 +848,39 @@
 			return 0;
 		}
 	});
+	jsaw.problem({
+		name: 'Path With Given Sequence (medium)',
+		statement: "Given a binary tree and a number sequence, find if the sequence is present as a root-to-leaf path in the given tree.",
+		examples: "Input: tree = <img src = 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/2009/06/tree12.gif'>, sequence = [1, 2, 5]; Output: true; Explanation: The tree has a path 1->2->5;",
+		test: function (findPath) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("test", function () {
+					let root = new Node(1);
+					root.left = new Node(2);
+					root.right = new Node(3);
+					root.left.left = new Node(4);
+					root.left.right = new Node(5);
+					root.right.left = new Node(6);
+					root.right.right = new Node(7);
+					expect(findPath(root, [1, 2, 5])).toEqual(true);
+				});
+			});
+		},
+		code: function findPath(rootNode, sequence) {
+			/**
+			 *	function Node(value) {
+			 *		this.value = value;
+			 *		this.left = null;
+			 *		this.right = null;
+			 *	}
+			 */
+			return false;
+		},
+		solution: function findPath(rootNode, sequence) {
+			return false;
+		}
+	});
 	//Dynamic Programming
 	jsaw.problem({
 		name: '0/1 Knapsack',
