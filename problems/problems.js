@@ -800,7 +800,7 @@
                     it("3. Calling add(4) should return 6.", function () {
                         expect(test.add(4)).toEqual(6);
                     });
-                }
+                });
             });
         },
         code: function KthLargestNumberInStream(nums, k) {
