@@ -790,7 +790,7 @@
             //jasmine style test cases.
             describe(this.name, function () {
                 describe("Input: nums = [3, 1, 5, 12, 2, 11], k = 4.", function () {
-                    var test = new KthLargestNumberInStream([3, 1, 5, 12, 2, 11],4);
+                    var test = new KthLargestNumberInStream([3, 1, 5, 12, 2, 11], 4);
                     it("1. Calling add(6) should return 5.", function () {
                         expect(test.add(6)).toEqual(5);
                     });
@@ -960,13 +960,14 @@
         }
     });
     //Dynamic Programming
+    //0/1 Knapsack
     jsaw.problem({
         name: '0/1 Knapsack',
         statement: "Given two integer arrays to represent weights and profits of 'N' items, we need to find a subset of these items which will give us maximum profit such that their cumulative weight is not more than a given number 'C'. Each item can only be selected once, which means either we put an item in the knapsack or we skip it.",
-        examples: "Input: profits = [4, 5, 3, 7], weights =  [2, 3, 1, 4], capacity = 5; Output: 10; Explanation: profits[2] + profits[3] = 10, weights[2] + weights[3] = 5.",
+        examples: "Input: profits = [4, 5, 3, 7], weights = [2, 3, 1, 4], capacity = 5; Output: 10; Explanation: profits[2] + profits[3] = 10, weights[2] + weights[3] = 5.",
         test: function (solveKnapsack) {
             describe(this.name, function () {
-                it("Input: profits = [4, 5, 3, 7], weights = [2, 3, 1, 4]; Output: 10. ", function () {
+                it("Input: profits = [4, 5, 3, 7], weights = [2, 3, 1, 4], capacity = 5; Output: 10. ", function () {
                     expect(solveKnapsack([4, 5, 3, 7], [2, 3, 1, 4], 5)).toEqual(10);
                 });
             });
@@ -1073,6 +1074,103 @@
             return 0;
         },
         solution: function findTargetSubsets(numbers, s) {
+            return 0;
+        }
+    });
+    //Unbounded Knapsack
+    jsaw.problem({
+        name: 'Unbounded Knapsack',
+        statement: "Given two integer arrays to represent weights and profits of 'N' items, we need to find a subset of these items which will give us maximum profit such that their cumulative weight is not more than a given number 'C'. We can assume an infinite supply of item quantities; therefore, each item can be selected multiple times.",
+        examples: "Input: profits = [15, 20, 50], weights = [1, 2, 3], capacity = 5; Output: 80; Explanation: 2*profits[0] + profits[2] = 10, 2*weights[0] + weights[2] = 5.",
+        test: function (solveKnapsack) {
+            describe(this.name, function () {
+                it("Input: profits = [15, 20, 50], weights = [1, 2, 3], capacity = 5; Output: 80.", function () {
+                    expect(solveKnapsack([15, 20, 50], [1, 2, 3], 5)).toEqual(80);
+                });
+            });
+        },
+        code: function solveKnapsack(profits, weights, capacity) {
+            return 0;
+        },
+        solution: function solveKnapsack(profits, weights, capacity) {
+            return 0;
+        }
+    });
+    jsaw.problem({
+        name: 'Rod Cutting',
+        statement: "Given a rod of length n, we are asked to cut the rod and sell the pieces in a way that will maximize the profit. We are also given the price of every piece of length i where 1 <= i <=n.",
+        examples: "Input: lengths = [1, 2, 3, 4, 5], prices = [2, 6, 7, 10, 13], rodLength = 5; Output: 14; Explanation: 2 pieces of length 2, 1 piece of length 1.",
+        test: function (solveRodCutting) {
+            describe(this.name, function () {
+                it("Input: lengths = [1, 2, 3, 4, 5], prices = [2, 6, 7, 10, 13], rodLength = 5; Output: 14.", function () {
+                    expect(solveRodCutting([1, 2, 3, 4, 5], [2, 6, 7, 10, 13], 5)).toEqual(14);
+                });
+            });
+        },
+        code: function solveRodCutting(lengths, prices, n) {
+            return 0;
+        },
+        solution: function solveRodCutting(lengths, prices, n) {
+            return 0;
+        }
+    });
+    jsaw.problem({
+        name: 'Coin Change',
+        statement: "Given an infinite supply of n coin denominations and a total money amount, we are asked to find the total number of distinct ways to make up that amount.",
+        examples: "Input: denominations = [1, 2, 3], total = 5; Output: 5; Explanation: There are five ways to make the change for 5: [1, 1, 1, 1, 1], [1, 1, 1, 2], [1, 1, 3], [1, 2, 2], and [2, 3].",
+        test: function (coinChange) {
+            describe(this.name, function () {
+                it("Input: denominations = [1, 2, 3], total = 5; Output: 5.", function () {
+                    expect(coinChange([1, 2, 3], 5)).toEqual(5);
+                });
+            });
+        },
+        code: function coinChange(denominations, total) {
+            return 0;
+        },
+        solution: function coinChange(denominations, total) {
+            return 0;
+        }
+    });
+    jsaw.problem({
+        name: 'Minimum Coin Change',
+        statement: "Given an infinite supply of n coin denominations and a total money amount, we are asked to find the minimum number of coins needed to make up that amount.",
+        examples: "Input: denominations = [1, 2, 3], total = 5; Output: 2; Explanation: We need minimum of two coins [2, 3] to make a total of 5.",
+        test: function (coinChange) {
+            describe(this.name, function () {
+                it("Input: denominations = [1, 2, 3], total = 5; Output: 2.", function () {
+                    expect(coinChange([1, 2, 3], 5)).toEqual(2);
+                });
+                it("Input: denominations = [1, 2, 3], total = 11; Output: 4.", function () {
+                    expect(coinChange([1, 2, 3], 11)).toEqual(4);
+                });
+            });
+        },
+        code: function coinChange(denominations, total) {
+            return 0;
+        },
+        solution: function coinChange(denominations, total) {
+            return 0;
+        }
+    });
+    jsaw.problem({
+        name: 'Maximum Ribbon Cut',
+        statement: "Given a number array to represent possible ribbon lengths and a total ribbon length n, we need to find the maximum number of pieces that the ribbon can be cut into.",
+        examples: "Input: n = 5, ribbonLengths = [2, 3, 5]; Output: 2; Explanation: Ribbon pieces will be [2, 3].",
+        test: function (cutRibbon) {
+            describe(this.name, function () {
+                it("Input: n = 5, ribbonLengths = [2, 3, 5]; Output: 2.", function () {
+                    expect(cutRibbon(5, [2, 3, 5])).toEqual(2);
+                });
+                it("Input: n = 7, ribbonLengths = [2, 3]; Output: 3.", function () {
+                    expect(cutRibbon(7, [2, 3])).toEqual(3);
+                });
+            });
+        },
+        code: function cutRibbon(n, ribbonLengths) {
+            return 0;
+        },
+        solution: function cutRibbon(n, ribbonLengths) {
             return 0;
         }
     });
