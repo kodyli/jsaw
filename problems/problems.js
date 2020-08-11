@@ -1174,4 +1174,110 @@
             return 0;
         }
     });
+    //Fibonacci Numbers
+    //Minimum Jumps to Reach the End missing
+    jsaw.problem({
+        name: 'Fibonacci Numbers',
+        statement: "Write a function to calculate the nth Fibonacci number.",
+        examples: "Input: num = 7; Output: 8; Explanation: 0, 1, 1, 2, 3, 5, 8.",
+        test: function (fibonacci) {
+            describe(this.name, function () {
+                it("Input: num = 7; Output: 8.", function () {
+                    expect(fibonacci(7)).toEqual(8);
+                });
+            });
+        },
+        code: function fibonacci(n) {
+            return 0;
+        },
+        solution: function fibonacci(n) {
+            return 0;
+        }
+    });
+    jsaw.problem({
+        name: 'Staircase',
+        statement: "Given a stair with n steps, implement a method to count how many possible ways are there to reach the top of the staircase, given that, at every step you can either take 1 step, 2 steps, or 3 steps.",
+        examples: "Input: stairs = 3; Output: 4; Explanation: Following are the 4 ways we can climb: [1, 1, 1], [1, 2], [2, 1], [3].",
+        test: function (countWays) {
+            describe(this.name, function () {
+                it("Input: stairs = 3; Output: 4.", function () {
+                    expect(countWays(3)).toEqual(4);
+                });
+                it("Input: stairs = 4; Output: 5.", function () {
+                    expect(countWays(4)).toEqual(5);
+                });
+            });
+        },
+        code: function countWays(stairs) {
+            return 0;
+        },
+        solution: function countWays(stairs) {
+            return 0;
+        }
+    });
+    jsaw.problem({
+        name: 'Number Factors',
+        statement: "Given a number n, implement a method to count how many possible ways there are to express n as the sum of 1, 3, or 4.",
+        examples: "Input: n = 4; Output: 4; Explanation: Following are the 4 ways we can express n: [1, 1, 1, 1], [1, 3], [3, 1], [4].",
+        test: function (countWays) {
+            describe(this.name, function () {
+                it("Input: n = 4; Output: 4.", function () {
+                    expect(countWays(4)).toEqual(4);
+                });
+                it("Input: stairs = 5; Output: 6.", function () {
+                    expect(countWays(5)).toEqual(6);
+                });
+            });
+        },
+        code: function countWays(n) {
+            return 0;
+        },
+        solution: function countWays(n) {
+            return 0;
+        }
+    });
+    jsaw.problem({
+        name: 'Minimum Jumps with Fee',
+        statement: "Given a staircase with n steps and an array of n numbers representing the fee that you have to pay if you take the step. Implement a method to calculate the minimum fee required to reach the top of the staircase(beyond the top-most step). At every step, you have an option to take either 1 step, 2 steps, or 3 steps. You should assume that you are standing at the first step.",
+        examples: "Number of stairs: 6; Input: fees = [1, 2, 5, 2, 1, 2]; Output: 3; Explanation: Starting from index 0, we can reach the top through: 0->3->top, The total fee we have to pay will be 1+2=3.",
+        test: function (findMiniFee) {
+            describe(this.name, function () {
+                it("Input: fees = [1, 2, 5, 2, 1, 2]; Output: 3.", function () {
+                    expect(findMiniFee([1, 2, 5, 2, 1, 2])).toEqual(3);
+                });
+                it("Input: fees = [2, 3, 4, 5]; Output: 5.", function () {
+                    expect(findMiniFee([2, 3, 4, 5])).toEqual(5);
+                });
+            });
+        },
+        code: function findMiniFee(fees) {
+            return 0;
+        },
+        solution: function findMiniFee(fees) {
+            return 0;
+        }
+    });
+    jsaw.problem({
+        name: 'House Thief',
+        statement: "There are n houses built in a line. A thief wants to steal maximum possible money from these houses. The only restriction the thief has is that he can't steal from two consecutive houses, as that would alert the security system. How should the thief maximize his stealing? Given a number array representing the wealth of n houses, determine the maximum amount of money the thief can steal without alerting the security system.",
+        examples: "Input: wealths = [2, 5, 1, 3, 6, 2, 4]; Output: 15; Explanation: The thief should steal from houses 5+6+4 = 15",
+        test: function (findMaxSteal) {
+            describe(this.name, function () {
+                it("Input: wealths = [2, 5, 1, 3, 6, 2, 4]; Output: 15.", function () {
+                    expect(findMaxSteal([2, 5, 1, 3, 6, 2, 4])).toEqual(15);
+                });
+                it("Input: fees = [2, 10, 14, 8, 1]; Output: 18.", function () {
+                    expect(findMaxSteal([2, 10, 14, 8, 1])).toEqual(18);
+                });
+            });
+        },
+        code: function findMaxSteal(wealths) {
+            return 0;
+        },
+        solution: function findMaxSteal(wealths) {
+            return 0;
+        }
+    });
+
+
 })(jsaw);
