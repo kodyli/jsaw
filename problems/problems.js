@@ -548,20 +548,20 @@
             //jasmine style test cases.
             describe(this.name, function () {
                 it("test", function () {
-                    let root = new Node(1);
-                    root.left = new Node(2);
-                    root.right = new Node(3);
-                    root.left.left = new Node(4);
-                    root.left.right = new Node(5);
-                    root.right.left = new Node(6);
-                    root.right.right = new Node(7);
+                    let root = new TreeNode(1);
+                    root.left = new TreeNode(2);
+                    root.right = new TreeNode(3);
+                    root.left.left = new TreeNode(4);
+                    root.left.right = new TreeNode(5);
+                    root.right.left = new TreeNode(6);
+                    root.right.right = new TreeNode(7);
                     expect(bfsTraverse(root)).toEqual([[1], [2, 3], [4, 5, 6, 7]]);
                 });
             });
         },
         code: function bfsTraverse(rootNode) {
             /**
-             *	function Node(value) {
+             *	function TreeNode(value) {
              *		this.value = value;
              *		this.left = null;
              *		this.right = null;
@@ -601,20 +601,20 @@
             //jasmine style test cases.
             describe(this.name, function () {
                 it("test", function () {
-                    let root = new Node(1);
-                    root.left = new Node(2);
-                    root.right = new Node(3);
-                    root.left.left = new Node(4);
-                    root.left.right = new Node(5);
-                    root.right.left = new Node(6);
-                    root.right.right = new Node(7);
+                    let root = new TreeNode(1);
+                    root.left = new TreeNode(2);
+                    root.right = new TreeNode(3);
+                    root.left.left = new TreeNode(4);
+                    root.left.right = new TreeNode(5);
+                    root.right.left = new TreeNode(6);
+                    root.right.right = new TreeNode(7);
                     expect(bfsTraverse(root)).toEqual([[4, 5, 6, 7], [2, 3], [1]]);
                 });
             });
         },
         code: function bfsTraverse(rootNode) {
             /**
-             *	function Node(value) {
+             *	function TreeNode(value) {
              *		this.value = value;
              *		this.left = null;
              *		this.right = null;
@@ -654,20 +654,20 @@
             //jasmine style test cases.
             describe(this.name, function () {
                 it("test", function () {
-                    let root = new Node(1);
-                    root.left = new Node(2);
-                    root.right = new Node(3);
-                    root.left.left = new Node(4);
-                    root.left.right = new Node(5);
-                    root.right.left = new Node(6);
-                    root.right.right = new Node(7);
+                    let root = new TreeNode(1);
+                    root.left = new TreeNode(2);
+                    root.right = new TreeNode(3);
+                    root.left.left = new TreeNode(4);
+                    root.left.right = new TreeNode(5);
+                    root.right.left = new TreeNode(6);
+                    root.right.right = new TreeNode(7);
                     expect(bfsTraverse(root)).toEqual([[1], [3, 2], [4, 5, 6, 7]]);
                 });
             });
         },
         code: function bfsTraverse(rootNode) {
             /**
-             *	function Node(value) {
+             *	function TreeNode(value) {
              *		this.value = value;
              *		this.left = null;
              *		this.right = null;
@@ -687,20 +687,20 @@
             //jasmine style test cases.
             describe(this.name, function () {
                 it("test", function () {
-                    let root = new Node(1);
-                    root.left = new Node(2);
-                    root.right = new Node(3);
-                    root.left.left = new Node(4);
-                    root.left.right = new Node(5);
-                    root.right.left = new Node(6);
-                    root.right.right = new Node(7);
+                    let root = new TreeNode(1);
+                    root.left = new TreeNode(2);
+                    root.right = new TreeNode(3);
+                    root.left.left = new TreeNode(4);
+                    root.left.right = new TreeNode(5);
+                    root.right.left = new TreeNode(6);
+                    root.right.right = new TreeNode(7);
                     expect(findLevelAverages(root)).toEqual([1, 2.5, 5.5]);
                 });
             });
         },
         code: function findLevelAverages(rootNode) {
             /**
-             *	function Node(value) {
+             *	function TreeNode(value) {
              *		this.value = value;
              *		this.left = null;
              *		this.right = null;
@@ -720,18 +720,18 @@
             //jasmine style test cases.
             describe(this.name, function () {
                 it("test", function () {
-                    let root = new Node(1);
-                    root.left = new Node(2);
-                    root.right = new Node(3);
-                    root.left.left = new Node(4);
-                    root.left.right = new Node(5);
+                    let root = new TreeNode(1);
+                    root.left = new TreeNode(2);
+                    root.right = new TreeNode(3);
+                    root.left.left = new TreeNode(4);
+                    root.left.right = new TreeNode(5);
                     expect(findMinimumDepth(root)).toEqual(2);
                 });
             });
         },
         code: function findMinimumDepth(rootNode) {
             /**
-             *	function Node(value) {
+             *	function TreeNode(value) {
              *		this.value = value;
              *		this.left = null;
              *		this.right = null;
@@ -812,6 +812,7 @@
             return [];
         }
     });
+
     //Depth First Search (DFS)
     jsaw.problem({
         name: 'Binary Tree Path Sum (easy)',
@@ -821,18 +822,18 @@
             //jasmine style test cases.
             describe(this.name, function () {
                 it("1 + 2 + 5 = 8.", function () {
-                    let root = new Node(1);
-                    root.left = new Node(2);
-                    root.right = new Node(3);
-                    root.left.left = new Node(4);
-                    root.left.right = new Node(5);
+                    let root = new TreeNode(1);
+                    root.left = new TreeNode(2);
+                    root.right = new TreeNode(3);
+                    root.left.left = new TreeNode(4);
+                    root.left.right = new TreeNode(5);
                     expect(findPath(root, 8)).toEqual(true);
                 });
             });
         },
         code: function findPath(rootNode, s) {
             /**
-             *	function Node(value) {
+             *	function TreeNode(value) {
              *		this.value = value;
              *		this.left = null;
              *		this.right = null;
@@ -842,7 +843,7 @@
         },
         solution: function findPath(rootNode, s) {
             /**
-             *	function Node(value) {
+             *	function TreeNode(value) {
              *		this.value = value;
              *		this.left = null;
              *		this.right = null;
@@ -870,19 +871,19 @@
             //jasmine style test cases.
             describe(this.name, function () {
                 it("1 + 2 + 5 = 8; 1 + 3 + 4 = 8;", function () {
-                    let root = new Node(1);
-                    root.left = new Node(2);
-                    root.right = new Node(3);
-                    root.left.left = new Node(4);
-                    root.left.right = new Node(5);
-                    root.right.left = new Node(4);
+                    let root = new TreeNode(1);
+                    root.left = new TreeNode(2);
+                    root.right = new TreeNode(3);
+                    root.left.left = new TreeNode(4);
+                    root.left.right = new TreeNode(5);
+                    root.right.left = new TreeNode(4);
                     expect(findPaths(root, 8)).toEqual(2);
                 });
             });
         },
         code: function findPaths(rootNode, s) {
             /**
-             *	function Node(value) {
+             *	function TreeNode(value) {
              *		this.value = value;
              *		this.left = null;
              *		this.right = null;
@@ -902,19 +903,19 @@
             //jasmine style test cases.
             describe(this.name, function () {
                 it("124 + 125 + 134 = 383.", function () {
-                    let root = new Node(1);
-                    root.left = new Node(2);
-                    root.right = new Node(3);
-                    root.left.left = new Node(4);
-                    root.left.right = new Node(5);
-                    root.right.left = new Node(4);
+                    let root = new TreeNode(1);
+                    root.left = new TreeNode(2);
+                    root.right = new TreeNode(3);
+                    root.left.left = new TreeNode(4);
+                    root.left.right = new TreeNode(5);
+                    root.right.left = new TreeNode(4);
                     expect(findSumOfPathNumbers(root)).toEqual(383);
                 });
             });
         },
         code: function findSumOfPathNumbers(rootNode) {
             /**
-             *	function Node(value) {
+             *	function TreeNode(value) {
              *		this.value = value;
              *		this.left = null;
              *		this.right = null;
@@ -934,20 +935,20 @@
             //jasmine style test cases.
             describe(this.name, function () {
                 it("test", function () {
-                    let root = new Node(1);
-                    root.left = new Node(2);
-                    root.right = new Node(3);
-                    root.left.left = new Node(4);
-                    root.left.right = new Node(5);
-                    root.right.left = new Node(6);
-                    root.right.right = new Node(7);
+                    let root = new TreeNode(1);
+                    root.left = new TreeNode(2);
+                    root.right = new TreeNode(3);
+                    root.left.left = new TreeNode(4);
+                    root.left.right = new TreeNode(5);
+                    root.right.left = new TreeNode(6);
+                    root.right.right = new TreeNode(7);
                     expect(findPath(root, [1, 2, 5])).toEqual(true);
                 });
             });
         },
         code: function findPath(rootNode, sequence) {
             /**
-             *	function Node(value) {
+             *	function TreeNode(value) {
              *		this.value = value;
              *		this.left = null;
              *		this.right = null;
