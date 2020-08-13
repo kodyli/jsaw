@@ -816,11 +816,11 @@
     jsaw.problem({
         name: "Merge K Sorted Lists (medium)",
         statement: "Given an array of sorted LinkedLists, merge them into one sorted list.",
-        examples: "Input: L1 = 2->6->8, L2 = 3->6->7, L3 = 1->3->4; Output: [1, 2, 3, 3, 4, 6, 6, 7, 8].",
+        examples: "L1 = 2->6->8, L2 = 3->6->7, L3 = 1->3->4; Input: lists = [root1, root2, root3]; Output: [1, 2, 3, 3, 4, 6, 6, 7, 8].",
         test: function (mergeLists) {
             //jasmine style test cases.
             describe(this.name, function () {
-                it("Input: L1 = 2->6->8, L2 = 3->6->7, L3 = 1->3->4; Output: [1, 2, 3, 3, 4, 6, 6, 7, 8].", function () {
+                it("L1 = 2->6->8, L2 = 3->6->7, L3 = 1->3->4; Input: lists = [root1, root2, root3]; Output: [1, 2, 3, 3, 4, 6, 6, 7, 8].", function () {
                     let l1 = new ListNode(2);
                     l1.next = new ListNode(6);
                     l1.next.next = new ListNode(8);
@@ -847,11 +847,11 @@
     jsaw.problem({
         name: "Kth Smallest Number in M Sorted Lists (medium)",
         statement: "Given 'M' sorted arrays, find the Kth smallest number among all the arrays.",
-        examples: "Input: L1 = [2, 6, 8], L2 = [3, 6, 7], L3 = [1, 3, 4]; k = 5; Output: 4; Explanation: The 5th smallest number among all the array is 4, this can be verfied from the merged list of all the arrays: [1, 2, 3, 3, 4, 6, 6, 7, 8].",
+        examples: "Input: lists = [[2, 6, 8], [3, 6, 7], [1, 3, 4]]; k = 5; Output: 4; Explanation: The 5th smallest number among all the array is 4, this can be verfied from the merged list of all the arrays: [1, 2, 3, 3, 4, 6, 6, 7, 8].",
         test: function (findKthSmallest) {
             //jasmine style test cases.
             describe(this.name, function () {
-                it("Input: L1 = [2, 6, 8], L2 = [3, 6, 7], L3 = [1, 3, 4]; k = 5.", function () {
+                it("Input: lists = [[2, 6, 8], [3, 6, 7], [1, 3, 4]]; k = 5.", function () {
                     expect(findKthSmallest([[2, 6, 8], [3, 6, 7], [1, 3, 4]], 5)).toEqual(4);
                 });
             });
@@ -885,11 +885,11 @@
     jsaw.problem({
         name: "Smallest Number Range (hard)",
         statement: "Given 'M' sorted arrays, find the smallest range that includes at least one number from each of the 'M' lists.",
-        examples: "Input: nums1 = [1, 5, 8], nums2 = [4, 12], nums3 = [7, 8, 10]; Output: [4, 7]; Explanation: The range [4, 7] includes 5 from nums1, 4 from nums2, and 7 from nums3.",
+        examples: "Input: lists = [[1, 5, 8], [4, 12], [7, 8, 10]]; Output: [4, 7]; Explanation: The range [4, 7] includes 5 from nums1, 4 from nums2, and 7 from nums3.",
         test: function (findSmallestRange) {
             //jasmine style test cases.
             describe(this.name, function () {
-                it("Input: nums1 = [1, 5, 8], nums2 = [4, 12], nums3 = [7, 8, 10]; Output: [4, 7].", function () {
+                it("Input: lists = [[1, 5, 8], [4, 12], [7, 8, 10]]; Output: [4, 7].", function () {
                     expect(findSmallestRange([[1, 5, 8], [4, 12], [7, 8, 10]])).toEqual([4, 7]);
                 });
             });
