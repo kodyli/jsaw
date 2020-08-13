@@ -812,7 +812,95 @@
             return [];
         }
     });
+    //K-way Merge
+    jsaw.problem({
+        name: "Merge K Sorted Lists (medium)",
+        statement: "Given an array of sorted LinkedLists, merge them into one sorted list.",
+        examples: "Input: L1 = 2->6->8, L2 = 3->6->7, L3 = 1->3->4; Output: [1, 2, 3, 3, 4, 6, 6, 7, 8].",
+        test: function (mergeLists) {
+            //jasmine style test cases.
+            describe(this.name, function () {
+                it("Input: L1 = 2->6->8, L2 = 3->6->7, L3 = 1->3->4; Output: [1, 2, 3, 3, 4, 6, 6, 7, 8].", function () {
+                    let l1 = new ListNode(2);
+                    l1.next = new ListNode(6);
+                    l1.next.next = new ListNode(8);
 
+                    let l2 = new ListNode(3);
+                    l2.next = new ListNode(6);
+                    l2.next.next = new ListNode(7);
+
+                    let l3 = new ListNode(1);
+                    l3.next = new ListNode(3);
+                    l3.next.next = new ListNode(4);
+
+                    expect(mergeLists([l1, l2, l3])).toEqual([1, 2, 3, 3, 4, 6, 6, 7, 8]);
+                });
+            });
+        },
+        code: function mergeLists(lists) {
+            return [];
+        },
+        solution: function mergeLists(lists) {
+            return [];
+        }
+    });
+    jsaw.problem({
+        name: "Kth Smallest Number in M Sorted Lists (medium)",
+        statement: "Given 'M' sorted arrays, find the Kth smallest number among all the arrays.",
+        examples: "Input: L1 = [2, 6, 8], L2 = [3, 6, 7], L3 = [1, 3, 4]; k = 5; Output: 4; Explanation: The 5th smallest number among all the array is 4, this can be verfied from the merged list of all the arrays: [1, 2, 3, 3, 4, 6, 6, 7, 8].",
+        test: function (findKthSmallest) {
+            //jasmine style test cases.
+            describe(this.name, function () {
+                it("Input: L1 = [2, 6, 8], L2 = [3, 6, 7], L3 = [1, 3, 4]; k = 5.", function () {
+                    expect(findKthSmallest([[2, 6, 8], [3, 6, 7], [1, 3, 4]], 5)).toEqual(4);
+                });
+            });
+        },
+        code: function findKthSmallest(lists, k) {
+            return 0;
+        },
+        solution: function findKthSmallest(lists, k) {
+            return 0;
+        }
+    });
+    jsaw.problem({
+        name: "Kth Smallest Number in a Sorted Matrix (hard)",
+        statement: "Given an N*N matrix where each row and column is sorted in ascending order, find the Kth smallest element in the matrix.",
+        examples: "Input: matrix =[[2, 6, 8],[3, 7, 10],[5, 8, 11]]; k = 5; Output: 7; Explanation: The 5th smallest number in the matrix is 7.",
+        test: function (findKthSmallest) {
+            //jasmine style test cases.
+            describe(this.name, function () {
+                it("Input: matrix =[[2, 6, 8],[3, 7, 10],[5, 8, 11]]; k = 5; Output: 7.", function () {
+                    expect(findKthSmallest([[2, 6, 8], [3, 7, 10], [5, 8, 11]], 5)).toEqual(7);
+                });
+            });
+        },
+        code: function findKthSmallest(matrix, k) {
+            return 0;
+        },
+        solution: function findKthSmallest(matrix, k) {
+            return 0;
+        }
+    });
+    jsaw.problem({
+        name: "Smallest Number Range (hard)",
+        statement: "Given 'M' sorted arrays, find the smallest range that includes at least one number from each of the 'M' lists.",
+        examples: "Input: nums1 = [1, 5, 8], nums2 = [4, 12], nums3 = [7, 8, 10]; Output: [4, 7]; Explanation: The range [4, 7] includes 5 from nums1, 4 from nums2, and 7 from nums3.",
+        test: function (findSmallestRange) {
+            //jasmine style test cases.
+            describe(this.name, function () {
+                it("Input: nums1 = [1, 5, 8], nums2 = [4, 12], nums3 = [7, 8, 10]; Output: [4, 7].", function () {
+                    expect(findSmallestRange([[1, 5, 8], [4, 12], [7, 8, 10]])).toEqual([4, 7]);
+                });
+            });
+        },
+        code: function findSmallestRange(lists) {
+            return [];
+        },
+        solution: function findSmallestRange(lists) {
+            return [];
+        }
+    });
     //Depth First Search (DFS)
     jsaw.problem({
         name: 'Binary Tree Path Sum (easy)',
