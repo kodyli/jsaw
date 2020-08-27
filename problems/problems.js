@@ -572,13 +572,13 @@
 			//jasmine style test cases.
 			describe(this.name, function () {
 				it("Input: meetings = [[1, 4], [7, 9], [2, 5]]; Output: 2.", function () {
-					expect(canAttendAllAppointments([[1, 4], [7, 9], [2, 5]])).toEqual(2);
+					expect(minMeetingRooms([[1, 4], [7, 9], [2, 5]])).toEqual(2);
 				});
 				it("Input: meetings = [[6, 7], [2, 4], [8, 12]]; Output: 1.", function () {
-					expect(canAttendAllAppointments([[6, 7], [2, 4], [8, 12]])).toEqual(1);
+					expect(minMeetingRooms([[6, 7], [2, 4], [8, 12]])).toEqual(1);
 				});
 				it("Input: appointments = [[4, 5], [2, 3], [2, 4], [3, 5]]; Output: 2.", function () {
-					expect(canAttendAllAppointments([[4, 5], [2, 3], [2, 4], [3, 5]])).toEqual(2);
+					expect(minMeetingRooms([[4, 5], [2, 3], [2, 4], [3, 5]])).toEqual(2);
 				});
 			});
 		},
@@ -587,6 +587,28 @@
 		},
 		solution: function minMeetingRooms(meetings) {
 			return 0;
+		}
+	});
+	jsaw.problem({
+		name: 'Employee Free Time (hard)',
+		statement: "For K employees, we are given a list of intervals representing the working hours of each employee. Our goal is to find out if there is a free interval that is common to all employees. You can assume that each list of employee working hours is sorted at the start time.",
+		examples: "Input: workingHours =[[[1, 3], [5, 6]], [[2, 3], [6, 8]]]; Output: [3, 5]; Explanation: Both the employees are free between [3, 5].",
+		test: function (findEmployeeFreeTime) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("Input: workingHours =[[[1, 3], [5, 6]], [[2, 3], [6, 8]]]; Output: [3, 5].", function () {
+					expect(findEmployeeFreeTime([[[1, 3], [5, 6]], [[2, 3], [6, 8]]])).toEqual([3, 5]);
+				});
+				it("Input: meetings = [[[1, 3],[9, 12]],[[2, 4], [6, 8]]]; Output: [[4, 6], [8, 9]].", function () {
+					expect(findEmployeeFreeTime([[[1, 3], [9, 12]], [[2, 4], [6, 8]]])).toEqual([[4, 6], [8, 9]]);
+				});
+			});
+		},
+		code: function findEmployeeFreeTime(schedules) {
+			return [];
+		},
+		solution: function findEmployeeFreeTime(schedules) {
+			return [];
 		}
 	});
 	//Breadth First Search
