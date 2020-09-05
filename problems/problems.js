@@ -887,7 +887,7 @@
 	//K-way Merge
 	jsaw.problem({
 		name: "Merge K Sorted Lists (medium)",
-		statement: "Given an array of sorted LinkedLists, merge them into one sorted list.",
+		statement: "Given an array of sorted LinkedLists, merge them into one sorted array.",
 		examples: "L1 = 2->6->8, L2 = 3->6->7, L3 = 1->3->4; Input: lists = [root1, root2, root3]; Output: [1, 2, 3, 3, 4, 6, 6, 7, 8].",
 		test: function (mergeLists) {
 			//jasmine style test cases.
@@ -913,6 +913,25 @@
 			return [];
 		},
 		solution: function mergeLists(lists) {
+			return [];
+		}
+	});
+	jsaw.problem({
+		name: "Merge K Sorted Arrays (medium)",
+		statement: "Given an array of sorted Arrays, merge them into one sorted array.",
+		examples: "Input: lists = [[2, 6, 8], [3, 6, 7], [1, 3, 4]]; Output: [1, 2, 3, 3, 4, 6, 6, 7, 8].",
+		test: function (mergeArrays) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("Input: lists = [[2, 6, 8], [3, 6, 7], [1, 3, 4]]; Output: [1, 2, 3, 3, 4, 6, 6, 7, 8].", function () {
+					expect(mergeArrays([[2, 6, 8], [3, 6, 7], [1, 3, 4]])).toEqual([1, 2, 3, 3, 4, 6, 6, 7, 8]);
+				});
+			});
+		},
+		code: function mergeArrays(arrays) {
+			return [];
+		},
+		solution: function mergeArrays(arrays) {
 			return [];
 		}
 	});
