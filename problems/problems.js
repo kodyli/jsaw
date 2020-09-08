@@ -611,7 +611,7 @@
 			return [];
 		}
 	});
-	//Breadth First Search
+	//Tree Breadth First Search
 	jsaw.problem({
 		name: 'Binary Tree Level Order Traversal (easy)',
 		statement: "Given a binary tree, populate an array to represent its level-by-level traversal. You should populate the values of all nodes of each level from left to right in separate sub-arrays.",
@@ -815,6 +815,48 @@
 			return 0;
 		}
 	});
+	//Tree Depth First Search
+	//Two Heaps
+	jsaw.problem({
+		name: 'Find the Median of a Number Stream (medium)',
+		statement: "Design a class to calculate the median of a number stream. The class should have the following two methods: insertNum(int num): stores the number in the class findMedian(); returns the median of all numbers inserted in the class. If the count fo numbers inserted in the class is even, the median will be average of the middle two numbers.",
+		examples: "insertNum(3); insertNum(1); findMedian() → output: 2; insertNum(4); findMedian() → output: 3; insertNum(4); findMedian() → output: 3.5.",
+		test: function (MedianOfAStream) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("insertNum(3); insertNum(1); findMedian() → output: 2.", function () {
+					let object = new MedianOfAStream();
+					object.insertNum(3);
+					object.insertNum(1);
+					expect(object.findMedian()).toEqual(2);
+				});
+				it("insertNum(3); insertNum(1); insertNum(4); findMedian() → output: 3;", function () {
+					let object = new MedianOfAStream();
+					object.insertNum(3);
+					object.insertNum(1);
+					object.insertNum(4);
+					expect(object.findMedian()).toEqual(3);
+				});
+				it("insertNum(3); insertNum(1); insertNum(4); insertNum(4); findMedian() → output: 3.5.", function () {
+					let object = new MedianOfAStream();
+					object.insertNum(3);
+					object.insertNum(1);
+					object.insertNum(4);
+					object.insertNum(4);
+					expect(object.findMedian()).toEqual(3.5);
+				});
+			});
+		},
+		code: function MedianOfAStream() {
+			this.insertNum = function (num) {};
+			this.findMedian = function () {};
+		},
+		solution: function MedianOfAStream() {
+			this.insertNum = function (num) {};
+			this.findMedian = function () {};
+		}
+	});
+
 	//Top K Elements
 	jsaw.problem({
 		name: "Top 'K' Numbers (easy)",
@@ -1139,6 +1181,8 @@
 			return false;
 		}
 	});
+
+
 	//Dynamic Programming
 	//0/1 Knapsack
 	jsaw.problem({
