@@ -16,6 +16,18 @@
 			return numbers;
 		},
 		solution: function selectionSort(numbers) {
+			var l = numbers.length;
+			for (var i = 0; i < l; i++) {
+				var min = i;
+				for (var j = i + 1; j < l; j++) {
+					if (numbers[j] < numbers[min]) {
+						min = j;
+					}
+				}
+				var temp = numbers[i];
+				numbers[i] = numbers[min];
+				numbers[min] = temp;
+			}
 			return numbers;
 		}
 	});
@@ -35,6 +47,14 @@
 			return numbers;
 		},
 		solution: function insertionSort(numbers) {
+			for (var i = 1, l = numbers.length; i < l; i++) {
+				var j,
+					min = numbers[i];
+				for (j = i; j > 0 && numbers[j - 1] > min; j--) {
+					numbers[j] = numbers[j - 1];
+				}
+				numbers[j] = min;
+			}
 			return numbers;
 		}
 	});
