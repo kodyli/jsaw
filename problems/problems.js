@@ -1,4 +1,81 @@
 (function (jsaw) {
+	//Sorting
+	jsaw.problem({
+		name: 'Selection Sort',
+		statement: "Given an array, sort it by using selection sort.",
+		examples: "Input: numbers = [1, 3, 2, 6, 5, 4, 7, 8, 9, 0]; Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].",
+		test: function (selectionSort) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("Input: numbers = [1, 3, 2, 6, 5, 4, 7, 8, 9, 0]; Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].", function () {
+					expect(selectionSort([1, 3, 2, 6, 5, 4, 7, 8, 9, 0])).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+				});
+			});
+		},
+		code: function selectionSort(numbers) {
+			return numbers;
+		},
+		solution: function selectionSort(numbers) {
+			return numbers;
+		}
+	});
+	jsaw.problem({
+		name: 'Insertion Sort',
+		statement: "Given an array, sort it by using insertion sort.",
+		examples: "Input: numbers = [1, 3, 2, 6, 5, 4, 7, 8, 9, 0]; Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].",
+		test: function (insertionSort) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("Input: numbers = [1, 3, 2, 6, 5, 4, 7, 8, 9, 0]; Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].", function () {
+					expect(insertionSort([1, 3, 2, 6, 5, 4, 7, 8, 9, 0])).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+				});
+			});
+		},
+		code: function insertionSort(numbers) {
+			return numbers;
+		},
+		solution: function insertionSort(numbers) {
+			return numbers;
+		}
+	});
+	jsaw.problem({
+		name: 'Merge Sort',
+		statement: "Given an array, sort it by using merge sort.",
+		examples: "Input: numbers = [1, 3, 2, 6, 5, 4, 7, 8, 9, 0]; Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].",
+		test: function (mergeSort) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("Input: numbers = [1, 3, 2, 6, 5, 4, 7, 8, 9, 0]; Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].", function () {
+					expect(mergeSort([1, 3, 2, 6, 5, 4, 7, 8, 9, 0])).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+				});
+			});
+		},
+		code: function mergeSort(numbers) {
+			return numbers;
+		},
+		solution: function mergeSort(numbers) {
+			return numbers;
+		}
+	});
+	jsaw.problem({
+		name: 'Quick Sort',
+		statement: "Given an array, sort it by using quick sort.",
+		examples: "Input: numbers = [1, 3, 2, 6, 5, 4, 7, 8, 9, 0]; Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].",
+		test: function (quickSort) {
+			//jasmine style test cases.
+			describe(this.name, function () {
+				it("Input: numbers = [1, 3, 2, 6, 5, 4, 7, 8, 9, 0]; Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].", function () {
+					expect(quickSort([1, 3, 2, 6, 5, 4, 7, 8, 9, 0])).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+				});
+			});
+		},
+		code: function quickSort(numbers) {
+			return numbers;
+		},
+		solution: function quickSort(numbers) {
+			return numbers;
+		}
+	});
 	//Sliding Window
 	jsaw.problem({
 		name: 'Find Average of Subarray of Size K (easy)',
