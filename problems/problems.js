@@ -1368,5 +1368,30 @@
         }
     });
 
+	//Palindromic Subsequence
+	jsaw.problem({
+        name: 'Longest Palindromic Subsequence',
+        statement: "Given a sequence, find the length of its longest Palindromic Subsequence(LPS).",
+        examples: "Input: str = 'abdbca'; Output: 5; Explanation: LPS is 'abdba'.",
+        test: function (lps) {
+            describe(this.name, function () {
+                it("Input: str = 'abdbca'; Output: 5;", function () {
+                    expect(lps('abdbca')).toEqual(5);
+                });
+				it("Input: str = 'cddpd'; Output: 3;", function () {
+                    expect(lps('cddpd')).toEqual(3);
+                });
+				it("Input: str = 'pqr'; Output: 1;", function () {
+                    expect(lps('pqr')).toEqual(1);
+                });
+            });
+        },
+        code: function lps(n) {
+            return 0;
+        },
+        solution: function lps(n) {
+            return 0;
+        }
+    });
 
 })(jsaw);
