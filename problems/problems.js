@@ -1625,5 +1625,29 @@
             return 0;
         }
     });
-
+	//Longest Palindromic Substring
+	jsaw.problem({
+        name: 'Longest Palindromic Substring',
+        statement: "Given a string, find the length of its longest Palindromic Substring, In a palindromic string, elements read the same backward and forward.",
+        examples: "Input: str = 'abdbca'; Output: 3; Explanation: LPS is 'bdb'.",
+        test: function (lps) {
+            describe(this.name, function () {
+                it("Input: str = 'abdbca'; Output: 3;", function () {
+                    expect(lps('abdbca')).toEqual(3);
+                });
+				it("Input: str = 'cddpd'; Output: 3;", function () {
+                    expect(lps('cddpd')).toEqual(3);
+                });
+				it("Input: str = 'pqr'; Output: 1;", function () {
+                    expect(lps('pqr')).toEqual(1);
+                });
+            });
+        },
+        code: function lps(str) {
+            return 0;
+        },
+        solution: function lps(str) {
+            return 0;
+        }
+    });
 })(jsaw);
