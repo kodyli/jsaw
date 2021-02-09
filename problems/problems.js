@@ -1618,10 +1618,10 @@
                 });
             });
         },
-        code: function lps(n) {
+        code: function lps(str) {
             return 0;
         },
-        solution: function lps(n) {
+        solution: function lps(str) {
             return 0;
         }
     });
